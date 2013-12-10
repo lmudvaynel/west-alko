@@ -1,0 +1,14 @@
+<% content_for :body do %>
+  <ul id="products">
+    <% @products.each do |product| %>
+      <li>
+        <% volume = Refinery::Volumes::Volume.find(:first, :conditions => ['product_id = ?', product.id]) %>
+        <%= volume.pic.thumbnail("300x300").url %>
+        <br>
+        <%= link_to product.name, refinery.products_product_path(product) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

@@ -1,0 +1,29 @@
+tr:
+  refinery:
+    plugins:
+      volumes:
+        title: Volumes
+    volumes:
+      admin:
+        volumes:
+          actions:
+            create_new: Yeni Ekle Volume
+            reorder: Tekrar sirala Volumes
+            reorder_done: Tekrar siralama tamamlandiVolumes
+          records:
+            title: Volumes
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Volumes yok henuz.  Tikla "Yeni Ekle Volume" eklemek senin ilk volume.
+          volume:
+            view_live_html: Bunu canlu volume goruntule <br/><em>(yeni bir pencerede acar)</em>
+            edit: Bunu Duzenle volume
+            delete: Bunu Sil volume sonsuza dek
+      volumes:
+        show:
+          other: Diger Volumes
+  activerecord:
+    attributes:
+      'refinery/volumes/volume':
+        price: Price
+        volume: Volume
+        pic_id: Pic

@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::Volumes::Admin::VolumesController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.volumes_admin_volumes_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_volumes_admin_volume_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::Volumes::Admin::VolumesController.sortable? && ::Refinery::Volumes::Volume.many? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Volumes"),
+                 refinery.volumes_admin_volumes_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Volumes"),
+                 refinery.volumes_admin_volumes_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

@@ -1,0 +1,30 @@
+es:
+  refinery:
+    plugins:
+      volumes:
+        title: Volumes
+#        article: masculino/femenino
+    volumes:
+      admin:
+        volumes:
+          actions:
+            create_new: Crear nuevo volume
+            reorder: Reordenar volumes
+            reorder_done: Reordenación de volumes completada
+          records:
+            title: Volumes
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay volumes todavía. Pulsa en "Crear nuevo Volume" para crear tu primer volume.
+          volume:
+            view_live_html: Ver este volume como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este volume
+            delete: Borrar este volume para siempre
+      volumes:
+        show:
+          other: Otros volumes
+  activerecord:
+    attributes:
+      'refinery/volumes/volume':
+        price: Price
+        volume: Volume
+        pic_id: Pic

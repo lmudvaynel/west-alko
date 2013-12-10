@@ -1,0 +1,29 @@
+it:
+  refinery:
+    plugins:
+      volumes:
+        title: Volumes
+    volumes:
+      admin:
+        volumes:
+          actions:
+            create_new: Aggiungi Nuovo Volume
+            reorder: Riordina Volumes
+            reorder_done: Termina il Riordino di Volumes
+          records:
+            title: Volumes
+            sorry_no_results: "Spiacenti! Nessun risultato trovato"
+            no_items_yet: Non ci sono ancora Volumes. Clicca "Aggiungi Nuovo Volume" per aggiungere il tuo primo volume.
+          volume:
+            view_live_html: Guarda live questo volume <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo volume
+            delete: Rimuovi per sempre questo volume
+      volumes:
+        show:
+          other: Altri Volumes
+  activerecord:
+    attributes:
+      'refinery/volumes/volume':
+        price: Price
+        volume: Volume
+        pic_id: Pic

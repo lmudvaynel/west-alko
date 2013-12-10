@@ -1,0 +1,29 @@
+cs:
+  refinery:
+    plugins:
+      volumes:
+        title: Volumes
+    volumes:
+      admin:
+        volumes:
+          actions:
+            create_new: Přidat Volume
+            reorder: Řadit Volumes
+            reorder_done: Konec řazení Volumes
+          records:
+            title: Volumes
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Volumes. Zvolte "Přidat Volume" pro přidání prvního volume.
+          volume:
+            view_live_html: Zobrazit náhled volume<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit volume
+            delete: Smazat volume
+      volumes:
+        show:
+          other: Další Volumes
+  activerecord:
+    attributes:
+      'refinery/volumes/volume':
+        price: Price
+        volume: Volume
+        pic_id: Pic
