@@ -1,11 +1,48 @@
-<% content_for :body do %>
-  <ul id="products">
+<div class="page-content">
+  <div class="row clearfix mb">
+    <div class="filterable">
+      <ul class="filter">
+        <li class="all current"><a href="#">All</a></li>
+        <li class="digital"><a href="#">Jack</a></li>
+        <li class="3d"><a href="#">Jim</a></li>
+      </ul>
+    </div>
+  </div>
+
+<div class="row clearfix mbs">
+  <div class="grid_12">
+
+  <ul class="portfolio clearfix">
     <% @products.each do |product| %>
-      <li>
+      <% 
+        volume = Refinery::Volumes::Volume.find(:first, :conditions => ['product_id = ?', product.id])
+        if volume != nil
+          @link_to_product = "/" + I18n.locale.to_s + "/products/" + volume.product.id.to_s
+          @link_to_img = volume.pic.thumbnail("300x300").url
+        else
+          @link_to_product = ""
+          @link_to_img = ""
+        end
+
+      %>
+      <li class="grid_3" data-type="<= type >">
+        <div class="hover-fx">
+          
+          <% if volume != nil %>
+            <img src="<%= @link_to_img %>" alt="#">
+          <% end %>
+          <a class="fRight" href="<%= @link_to_product %>"><span><i class="icon-eye-open"></i></span></a>
+        </div>
+        <div class="detailes">
+          <h5> <a href="#">Sed ut perspiciatis unde</a> </h5>
+          <a href="#">3D Model</a>, <a href="#">Photography</a>
+        </div>
+      <div>
+        <br>
         <%= link_to product.name, refinery.products_product_path(product) %>
       </li>
     <% end %>
   </ul>
-<% end %>
 
-<%= render '/refinery/content_page' %>
+  </div>
+</div>
