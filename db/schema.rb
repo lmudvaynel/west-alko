@@ -176,8 +176,10 @@ ActiveRecord::Schema.define(:version => 20131211074401) do
     t.string   "volume"
     t.integer  "pic_id"
     t.integer  "position"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
+    t.integer  "product_id"
+    t.boolean  "used_in_home", :default => false
   end
 
   create_table "seo_meta", :force => true do |t|

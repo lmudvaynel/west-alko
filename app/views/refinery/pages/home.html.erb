@@ -1,0 +1,42 @@
+<div class="sliderr parallax" data-stellar-background-ratio="0.9" style="background: url(<%= image_path('backgrounds/2.jpg') %>);">
+  <ul id="co-slider" class="co-slider">
+  <% @first = true %>  
+  <% Refinery::Volumes::Volume.where("used_in_home = ?", true) .each do |volume| %>
+    <% 
+      @path = volume.pic.thumbnail("300x300").url
+      if @first == true 
+        @display = "style=display:block;"
+        @first = false
+      else 
+        @display = ""
+      end
+      @link_to_product = "/" + I18n.locale.to_s + "/products/" + volume.product.id.to_s
+    %>
+
+    <li class="co-item" <%= @display %>>
+        <div class="co-circle" style="background-image: url(<%= @path %>);">      
+          <div class="co-info-wrap">
+            <div class="co-info">
+              <div class="co-info-front" style="background-image: url(<%= @path %>);"></div>
+              <div class="co-info-back">
+                <a href="<%= @link_to_product %>">View</a>
+                <a href="#">Increase Image</a>
+              </div>  
+            </div>
+          </div>
+        </div>
+        <div class="co-shadow"></div>
+        <div class="co-title"><h3><%= volume.product.name %></h3></div>
+        <a class="co-link" href="<%= @link_to_product %>">Read More <i class="mii icon-angle-right"></i></a>
+      </li>
+  <% end %>
+    <nav>
+      <a href="#" class="co-prev">Previous</a>
+      <a href="#" class="co-next">Next</a>
+    </nav>
+  </ul>
+</div>
+
+<%=raw @page.content_for(:body) %>
+
+
