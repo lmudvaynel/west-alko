@@ -4,13 +4,16 @@
   <% Refinery::Volumes::Volume.where("used_in_home = ?", true) .each do |volume| %>
     <% 
       @path = volume.pic.thumbnail("300x300").url
+
       if @first == true 
         @display = "style=display:block;"
         @first = false
       else 
         @display = ""
       end
-      @link_to_product = "/" + I18n.locale.to_s + "/products/" + volume.product.id.to_s
+      if volume.product != nil 
+        @link_to_product = "/" + I18n.locale.to_s + "/products/" + volume.product.id.to_s  
+      end
     %>
 
     <li class="co-item" <%= @display %>>

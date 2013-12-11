@@ -5,7 +5,13 @@ module Refinery
 
       attr_accessible :price, :product_id, :volume, :pic_id, :position, :used_in_home
 
-      validates :price, :presence => true, :uniqueness => true
+      validates :product_id, :presence => true
+      
+      translates :price, :volume
+
+      class Translation
+        attr_accessible :locale
+      end
 
       belongs_to :pic, :class_name => '::Refinery::Image'
       belongs_to :product, :class_name => '::Refinery::Products::Product'
