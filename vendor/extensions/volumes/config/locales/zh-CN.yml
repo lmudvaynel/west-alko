@@ -1,0 +1,31 @@
+zh-CN:
+  refinery:
+    plugins:
+      volumes:
+        title: Volumes
+    volumes:
+      admin:
+        volumes:
+          actions:
+            create_new: 建立新的 Volume
+            reorder: 对 Volumes 重新排序
+            reorder_done: 对 Volumes 的重新排序结束
+          records:
+            title: Volumes
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Volumes yet. Click "Add New Volume" to add your first volume.
+            no_items_yet: 目前没有 Volumes . 点击 "Add New Volume" 创建一个volume.
+          volume:
+            view_live_html: 查看 volume 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 volume
+            delete: 永久删除 volume
+      volumes:
+        show:
+          other: 其他 Volumes
+  activerecord:
+    attributes:
+      'refinery/volumes/volume':
+        price: Price
+        volume: Volume
+        pic_id: Pic

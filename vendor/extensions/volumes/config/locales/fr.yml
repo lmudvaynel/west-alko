@@ -1,0 +1,29 @@
+fr:
+  refinery:
+    plugins:
+      volumes:
+        title: Volumes
+    volumes:
+      admin:
+        volumes:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Volume
+            reorder: Réordonner les Volumes
+            reorder_done: Fin de réordonnancement des Volumes
+          records:
+            title: Volumes
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Volume. Cliquer sur "Créer un(e) nouve(au/l/lle) Volume" pour créer votre premi(er/ère) volume.'
+          volume:
+            view_live_html: Voir ce(t/tte) volume <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) volume
+            delete: Supprimer définitivement ce(t/tte) volume
+      volumes:
+        show:
+          other: Autres Volumes
+  activerecord:
+    attributes:
+      'refinery/volumes/volume':
+        price: Price
+        volume: Volume
+        pic_id: Pic

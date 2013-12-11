@@ -1,0 +1,29 @@
+nl:
+  refinery:
+    plugins:
+      volumes:
+        title: Volumes
+    volumes:
+      admin:
+        volumes:
+          actions:
+            create_new: Nieuwe Volume toevoegen
+            reorder: De volgorde van de Volumes wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Volume-volgorde
+          records:
+            title: Volumes
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Volumes. Druk op 'Nieuwe Volume toevoegen' om de eerste toe te voegen.
+          volume:
+            view_live_html: Deze volume op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            edit: Bewerk deze volume
+            delete: Deze volume definitief verwijderen
+      volumes:
+        show:
+          other: Andere Volumes
+  activerecord:
+    attributes:
+      'refinery/volumes/volume':
+        price: Price
+        volume: Volume
+        pic_id: Pic

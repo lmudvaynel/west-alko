@@ -1,0 +1,29 @@
+nb:
+  refinery:
+    plugins:
+      volumes:
+        title: Volumes
+    volumes:
+      admin:
+        volumes:
+          actions:
+            create_new: Lag en ny Volume
+            reorder: Endre rekkefølgen på Volumes
+            reorder_done: Ferdig å endre rekkefølgen Volumes
+          records:
+            title: Volumes
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Volumes enda. Klikk på "Lag en ny Volume" for å legge til din første volume.
+          volume:
+            view_live_html: Vis hvordan denne volume ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne volume
+            delete: Fjern denne volume permanent
+      volumes:
+        show:
+          other: Andre Volumes
+  activerecord:
+    attributes:
+      'refinery/volumes/volume':
+        price: Price
+        volume: Volume
+        pic_id: Pic
