@@ -3,17 +3,12 @@ module Refinery
     class Volume < Refinery::Core::BaseModel
       self.table_name = 'refinery_volumes'
 
-      attr_accessible :price, :volume, :pic_id, :position
-
-      translates :price, :volume
-
-      class Translation
-        attr_accessible :locale
-      end
+      attr_accessible :price, :product_id, :volume, :pic_id, :position, :used_in_home
 
       validates :price, :presence => true, :uniqueness => true
 
       belongs_to :pic, :class_name => '::Refinery::Image'
+      belongs_to :product, :class_name => '::Refinery::Products::Product'
     end
   end
 end

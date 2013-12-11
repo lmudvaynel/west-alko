@@ -5,6 +5,12 @@
 
   <%= render '/refinery/admin/locale_picker',
               :current_locale => Globalize.locale %>
+
+  <div class='field'>
+    Choose 
+    <%= f.collection_select :product_id, Refinery::Products::Product.all,:id,:name, include_blank: true %>
+  </div>
+  
   <div class='field'>
     <%= f.label :price -%>
     <%= f.text_field :price, :class => 'larger widest' -%>
@@ -22,6 +28,10 @@
                :field => :pic_id,
                :image => @volume.pic,
                :toggle_image_display => false -%>
+  </div>
+
+  <div class="field">
+    Use in ShowRoom <%= f.select :used_in_home, [ true, false ] %>
   </div>
 
   <%= render '/refinery/admin/form_actions', :f => f,
