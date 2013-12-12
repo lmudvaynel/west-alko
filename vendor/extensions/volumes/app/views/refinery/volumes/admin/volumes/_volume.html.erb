@@ -1,6 +1,8 @@
 <li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(volume) -%>">
   <span class='title'>
+    <%= volume.product.name %>
     <%= volume.price %>
+    <%= volume.volume %>
 
     <% if Refinery::I18n.frontend_locales.many? %>
       <span class='preview'>
@@ -16,7 +18,6 @@
 
   </span>
   <span class='actions'>
-    
     <%= link_to refinery_icon_tag("application_edit.png"), refinery.edit_volumes_admin_volume_path(volume),
          :title => t('.edit') %>
     <%= link_to refinery_icon_tag("delete.png"), refinery.volumes_admin_volume_path(volume),

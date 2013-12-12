@@ -5,18 +5,20 @@
         <%
           if I18n.locale.to_s == "en"
             @link_to_product = "/products"
+            all = "All"
             vine = "Vine"
             vodka = "Vodka"
             whiskey = "Whiske"
           else
             @link_to_product = "/ru/products"
+            all = "Все"
             vine = "Вино"
             vodka = "Водка"
             whiskey = "Виски"
           end
 
         %>
-        <li><a href="<%= @link_to_product %>">All</a></li>
+        <li><a href="<%= @link_to_product %>"><%= all %></a></li>
         <li><a href="<%= @link_to_product %>?alco=vine"><%= vine %></a></li>
         <li><a href="<%= @link_to_product %>?alco=whiskey"><%= whiskey %></a></li>
         <li><a href="<%= @link_to_product %>?alco=vodka"><%= vodka %></a></li>

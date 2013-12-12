@@ -1,0 +1,81 @@
+<div class="breadcrumb-place">
+  <div class="row clearfix">
+    <h3 class="page-title"> Portfolio Item </h3>
+    <div class="breadcrumbIn">
+      <span> You are here: </span>
+      <ul>
+        <li><a href="index.html" title="Homepage"> <i class="icon-home"></i> </a></li>
+        <li> QUIS AUTEM VEL EUM IURE </li>
+      </ul>
+    </div><!-- breadcrumbIn -->
+  </div><!-- row -->
+</div><!-- breadcrumb -->
+
+<div class="page-content">
+  <div class="row clearfix mbs">
+    <div class="single-first-row mb clearfix">
+      <h4> <%= @product.name %> </h4>
+
+      <% 
+        if  I18n.locale.to_s == "en" 
+          next_product = "Next"
+          prev_product = "Previous"
+          all_product = "All Product"
+          path_all_product = "/products"
+          desc_product = "Product Description"
+        else
+          next_product = "Следующий"
+          prev_product = "Предыдущий"
+          all_product = "Все Продукты"
+          path_all_product = "/ru/products"
+          desc_product = "Описание продукта"
+        end
+      %>
+
+      <div class="project-links">
+        <a href="<%= @product.id %>"><i class="icon-angle-left mi"></i><%= prev_product %></a>
+        <a href="<%= path_all_product %>"> <i class="icon-th toptip" title="<%= all_product %>"></i> </a>
+        <a href="<%= @product.id %>"><%= next_product %><i class="icon-angle-right mii"></i></a>
+      </div><!-- links -->
+    </div><!-- first row -->
+
+    <div class="grid_6">
+      <div class="product-content">
+            <div class="product-img">
+              <div class="product_1 flexslider">
+                <ul class="slides">
+                  <% Refinery::Volumes::Volume.where("product_id = ?", @product.id).each do |volume|%>
+                    <li>
+                      <span class="price"><strong> <%= volume.volume %> </strong></span><br>
+                      <span class="price"><strong>  <%= volume.price %> </strong></span>
+                      <img src="<%= volume.pic.url %>"/>
+                    </li>
+                  <% end %>
+                </ul>
+              </div>
+            </div>
+          </div><!-- product content -->
+
+
+      <div class="share-post mb mtf clearfix">
+        
+        <div class="btn-share"><div id="fb-root"></div><div class="fb-like" data-send="false" data-layout="box_count" data-show-faces="false"></div></div>
+        <div class="btn-share"><script type="IN/Share" data-counter="top"></script></div>
+        <div class="btn-share"><script data-counter="top" type="XING/Share"></script></div>
+        <div class="btn-share"><g:plusone size="tall"></g:plusone></div>
+        <div class="btn-share"><a class='DiggThisButton DiggMedium'></a></div>
+        <div class="btn-share"><script type="text/javascript" src="../../../www.reddit.com/static/button/button2.js"></script></div>
+      </div><!-- close share post -->
+
+      
+    </div><!-- grid 9 -->
+
+    <div class="grid_6">
+      <h4 class="mb"> <%= desc_product %> </h4>
+      <%=raw @product.description %>
+    </div><!-- grid 3 -->
+  </div><!-- row -->
+</div><!-- end page content -->
+
+<div id="toTop"><i class="icon-angle-up"></i></div><!-- Back to top -->
+<!-- Scripts -->

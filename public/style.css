@@ -4571,8 +4571,7 @@ a.notification-close {
 	padding: 10px 0 0 12px;
 	display: block;
 }
-.anyClass li:hover .fLeft, .portfolio li:hover .fLeft { top: 40% }
-.anyClass li:hover .fRight, .portfolio li:hover .fRight { bottom: 37.8% }
+.anyClass li:hover .fRight, .portfolio li:hover .fRight { bottom: 37.8%; left: 43%; }
 
 .anyClass li.grid_3:hover .fLeft, .portfolio li.grid_3:hover .fLeft { top: 38% }
 

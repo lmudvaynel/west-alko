@@ -4,7 +4,7 @@ module Refinery
 
       before_filter :find_all_products
       before_filter :find_page
-
+      
       def index
         # you can use meta fields from your model instead (e.g. browser_title)
         # by swapping @page for @product in the line below:

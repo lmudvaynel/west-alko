@@ -8,12 +8,12 @@
 
 <%
   if I18n.locale.to_s == "en"
-    @link_to_product = "/products"
+    @link_to_product = "/"
     own = "Own"
     foreign = "Foreign"
     flood = "Flood"
   else
-    @link_to_product = "/ru/products"
+    @link_to_product = "/ru/"
     own = "Свое"
     foreign = "Чужое"
     flood = "Разлив"
@@ -25,26 +25,30 @@
           <nav>
             <ul class="sf-menu">
               <% first = true %>
-              <% Refinery::Page.where("show_in_menu != ?",false).each do |page| %>
+              <% Refinery::Page.where("show_in_menu != ?",false).order("lft ASC").each do |page| %>
                 <% if first == true %>
                   <li class="selectedLava">
                   <% first = false %>
                 <% else %>
                   <li>
                 <% end %>
-                  <a href="<%= page.url %>"><%= page.path %></a>
-                <% if page.id == 4 %>
+                <% if page.id == 1 %>
+                  <a href="<%= @link_to_product %>"><%= page.path %></a>
+                <% elsif page.id == 4 %>                    
+                  <a href="<%= @link_to_product %>products"><%= page.path %></a>
                   <ul>
                     <li>
-                      <a href="<%= @link_to_product %>?make=own"><%= own %></a>
+                      <a href="<%= @link_to_product %>products?make=own"><%= own %></a>
                     </li>
                     <li>
-                      <a href="<%= @link_to_product %>?make=flood"><%= flood %></a>
+                      <a href="<%= @link_to_product %>products?make=flood"><%= flood %></a>
                     </li>
                     <li>
-                      <a href="<%= @link_to_product %>?make=foreign"><%= foreign %></a>
+                      <a href="<%= @link_to_product %>products?make=foreign"><%= foreign %></a>
                     </li>
                   </ul>
+                <% else %>
+                  <a href="<%= @link_to_product + page.nested_url.first.to_s %>"><%= page.path %></a>
                 <% end %>
                 </li>
               <% end %>
