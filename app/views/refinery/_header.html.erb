@@ -7,5 +7,21 @@
 </div><!-- head -->
 
 <div class="headdown my_sticky">        
-    <%= header_menu.to_html %>
+    <div class="row clearfix">
+          <nav>
+            <ul class="sf-menu">
+              <% first = true %>
+              <% Refinery::Page.where("show_in_menu != ?",false).each do |page| %>
+                <% if first == true %>
+                  <li class="selectedLava">
+                  <% first = false %>
+                <% else %>
+                  <li>
+                <% end %>
+                  <a href="<%= page.url %>"><%= page.path %></a>
+                </li>
+              <% end %>
+            </ul><!-- end menu -->
+          </nav><!-- end nav -->
+        </div><!-- row -->
 </div>

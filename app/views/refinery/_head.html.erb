@@ -1,35 +1,39 @@
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <!-- Seo Meta -->
+    <meta name="description" content="Official - Premium Multi-purpose HTML5 Template">
+    <meta name="keywords" content="official, corporate, light, dark, themeforest, multi purpose, shop, magazine, premium">
+
+  <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="styles/icons.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="styles/animate.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="styles/responsive.css" media="screen" />
+    <link href='http://fonts.googleapis.com/css?family=Marcellus' rel='stylesheet' type='text/css'>
+    <style>
+      #footer {background: url(images/backgrounds/8.jpg) repeat}
+    </style><!-- Custom Styles -->
+
+  <!-- Circular -->
+    <link rel="stylesheet" type="text/css" href="styles/circular/circular.css" />
+    <script type="text/javascript" src="js/modernizr.custom.79639.js"></script> 
+    <noscript><link rel="stylesheet" type="text/css" href="styles/circular/noJS.css" /></noscript>
+
+  <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.html">
+
+  <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=EmulateIE8; IE=EDGE" />
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script language="javascript" type="text/javascript" src="js/excanvas.min.js"></script>
+  <![endif]-->
+
 <meta charset='<%= Rails.application.config.encoding %>' />
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
 <title><%= browser_title(yield(:title)) %></title>
-
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<meta name="description" content="Official - Premium Multi-purpose HTML5 Template">
-<meta name="keywords" content="official, corporate, light, dark, themeforest, multi purpose, shop, magazine, premium">
-
-<!-- Styles -->
-  <%= stylesheet_link_tag 'bootstrap.min'%>
-  <%= stylesheet_link_tag 'icons'%>
-  <%= stylesheet_link_tag 'responsive'%>
-  <link href='http://fonts.googleapis.com/css?family=Marcellus' rel='stylesheet' type='text/css'>
-  <style>
-    #footer {background: url(<%= image_path('background.jpg') %> repeat}
-  </style><!-- Custom Styles -->
-
-<!-- Circular -->
-  <%= javascript_include_tag 'modernizr.custom.79639' %>
-  <noscript>
-    <%= stylesheet_link_tag 'circular/noJS', :media => nil%>
-  </noscript>
-<!-- Favicon -->
-  <link rel="shortcut icon" href="<%= image_path('favicon.jpg') %>">
-  <link rel="apple-touch-icon" href="<%= image_path('apple-touch-icon.html') %>">
-
-<!--[if IE]>
-  <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=EmulateIE8; IE=EDGE" />
-  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-  <%= javascript_include_tag 'excanvas' %>
-<![endif]-->
 
 <%= raw %(<meta name="description" content="#{@meta.meta_description}" />) if @meta.meta_description.present? -%>
 <%= raw %(<link rel="canonical" content="#{@canonical}" />) if @canonical.present? -%>
@@ -40,6 +44,4 @@
 <%= yield :stylesheets %>
 
 <%= render '/refinery/google_analytics' %>
-
-<%= javascript_include_tag 'modernizr-min' %>
 
