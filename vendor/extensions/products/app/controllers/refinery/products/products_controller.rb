@@ -22,7 +22,17 @@ module Refinery
     protected
 
       def find_all_products
-        @products = Product.order('position ASC')
+        alco = ["vine","whiskey","vodka"]
+        make = ["own","flood","foreign"]
+        if make.include?(params[:make]) 
+          @products = Product.where("make_type = ?", params[:make]).order('position ASC')
+        elsif alco.include?(params[:alco]) 
+          @products = Product.where("alco_type = ?", params[:alco]).order('position ASC')
+        elsif make.include?(params[:make]) and alco.include?(params[:alco])
+          @products = Product.where("make_type = ?, alco_type = ? ", params[:make], params[:alco]).order('position ASC')
+        else
+          @products = Product.order('position ASC')
+        end
       end
 
       def find_page

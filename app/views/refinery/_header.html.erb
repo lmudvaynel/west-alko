@@ -6,6 +6,20 @@
   </div><!-- row -->
 </div><!-- head -->
 
+<%
+  if I18n.locale.to_s == "en"
+    @link_to_product = "/products"
+    own = "Own"
+    foreign = "Foreign"
+    flood = "Flood"
+  else
+    @link_to_product = "/ru/products"
+    own = "Свое"
+    foreign = "Чужое"
+    flood = "Разлив"
+  end
+%>
+
 <div class="headdown my_sticky">        
     <div class="row clearfix">
           <nav>
@@ -19,6 +33,19 @@
                   <li>
                 <% end %>
                   <a href="<%= page.url %>"><%= page.path %></a>
+                <% if page.id == 4 %>
+                  <ul>
+                    <li>
+                      <a href="<%= @link_to_product %>?make=own"><%= own %></a>
+                    </li>
+                    <li>
+                      <a href="<%= @link_to_product %>?make=flood"><%= flood %></a>
+                    </li>
+                    <li>
+                      <a href="<%= @link_to_product %>?make=foreign"><%= foreign %></a>
+                    </li>
+                  </ul>
+                <% end %>
                 </li>
               <% end %>
             </ul><!-- end menu -->
