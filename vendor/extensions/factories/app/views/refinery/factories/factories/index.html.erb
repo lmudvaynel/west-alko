@@ -1,11 +1,41 @@
-<% content_for :body do %>
-  <ul id="factories">
+<div class="page-content">
+  <div class="row clearfix mb">
+    <div class="filterable">
+      <ul class="filter">
+      </ul>
+    </div>
+  </div>
+
+<div class="row clearfix mbs">
+  <div class="grid_10">
+
+  <ul class="portfolio clearfix">
     <% @factories.each do |factory| %>
-      <li>
-        <%= link_to factory.name, refinery.factories_factory_path(factory) %>
+      <% 
+        if I18n.locale.to_s == 'en'
+          @link_to_factory = "/factories/" + factory.id.to_s
+        else
+          @link_to_factory = "/ru/factories/" + factory.id.to_s
+        end
+        if factory.title_image != nil
+          @link_to_img = factory.title_image.url
+        else 
+          @link_to_img = ""
+        end
+      %>
+      <li class="grid_6" data-type="digital">
+        <div class="hover-fx">
+          <img src="<%= @link_to_img %>">
+          <a class="fRight" href="<%= @link_to_factory %>"><span><i class="icon-eye-open"></i></span></a>
+        </div>
+        <div class="detailes">
+          <h5> <a href="<%= @link_to_factory %>"><%= factory.name %></a> </h5>
+        </div>
+      <div>
       </li>
     <% end %>
   </ul>
-<% end %>
 
-<%= render '/refinery/content_page' %>
+  </div>
+</div>
+
