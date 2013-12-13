@@ -6,6 +6,63 @@
   </div><!-- row -->
 </div><!-- head -->
 
+<%
+  if I18n.locale.to_s == "en"
+    @link_to_product = "/"
+    own = "Own"
+    foreign = "Foreign"
+    flood = "Flood"
+  else
+    @link_to_product = "/ru/"
+    own = "Свое"
+    foreign = "Чужое"
+    flood = "Разлив"
+  end
+%>
+
 <div class="headdown my_sticky">        
-    <%= header_menu.to_html %>
+    <div class="row clearfix">
+          <nav>
+            <ul class="sf-menu">
+              <% first = true %>
+              <% Refinery::Page.where("show_in_menu != ?",false).order("lft ASC").each do |page| %>
+                <% if first == true %>
+                  <li class="selectedLava">
+                  <% first = false %>
+                <% else %>
+                  <li>
+                <% end %>
+                <% if page.id == 1 %>
+                  <a href="<%= @link_to_product %>"><%= page.path %></a>
+                <% elsif page.id == 4 %>                    
+                  <a href="<%= @link_to_product %>products"><%= page.path %></a>
+                  <ul>
+                    <li>
+                      <a href="<%= @link_to_product %>products?make=own"><%= own %></a>
+                    </li>
+                    <li>
+                      <a href="<%= @link_to_product %>products?make=flood"><%= flood %></a>
+                    </li>
+                    <li>
+                      <a href="<%= @link_to_product %>products?make=foreign"><%= foreign %></a>
+                    </li>
+                  </ul>
+                <% else %>
+                  <a href="<%= @link_to_product + page.nested_url.first.to_s %>"><%= page.path %></a>
+                <% end %>
+                </li>
+              <% end %>
+              <li>
+                <% 
+                  if I18n.locale.to_s == 'en'
+                    lang = :ru
+                  else
+                    lang = :en
+                  end 
+                %>
+                <%= link_to Refinery::I18n.locales[lang], refinery.url_for(:locale => lang) %>
+              </li>
+            </ul><!-- end menu -->
+          </nav><!-- end nav -->
+        </div><!-- row -->
 </div>

@@ -5,6 +5,20 @@
 
   <%= render '/refinery/admin/locale_picker',
               :current_locale => Globalize.locale %>
+  
+
+  <div class='field'>
+    make 
+    <%= f.select :make_type, options_for_select(["own", "flood", "foreign"]) %>
+  </div>
+
+
+  <div class='field'>
+    alco 
+    <%= f.select :alco_type, options_for_select(["vine", "vodka", "whiskey"]) %>
+  </div>
+
+
   <div class='field'>
     <%= f.label :name -%>
     <%= f.text_field :name, :class => 'larger widest' -%>

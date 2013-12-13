@@ -2,9 +2,26 @@
   <div class="row clearfix mb">
     <div class="filterable">
       <ul class="filter">
-        <li class="all current"><a href="#">All</a></li>
-        <li class="digital"><a href="#">Jack</a></li>
-        <li class="3d"><a href="#">Jim</a></li>
+        <%
+          if I18n.locale.to_s == "en"
+            @link_to_product = "/products"
+            all = "All"
+            vine = "Vine"
+            vodka = "Vodka"
+            whiskey = "Whiske"
+          else
+            @link_to_product = "/ru/products"
+            all = "Все"
+            vine = "Вино"
+            vodka = "Водка"
+            whiskey = "Виски"
+          end
+
+        %>
+        <li><a href="<%= @link_to_product %>"><%= all %></a></li>
+        <li><a href="<%= @link_to_product %>?alco=vine"><%= vine %></a></li>
+        <li><a href="<%= @link_to_product %>?alco=whiskey"><%= whiskey %></a></li>
+        <li><a href="<%= @link_to_product %>?alco=vodka"><%= vodka %></a></li>
       </ul>
     </div>
   </div>
@@ -17,7 +34,11 @@
       <% 
         volume = Refinery::Volumes::Volume.find(:first, :conditions => ['product_id = ?', product.id])
         if volume != nil
-          @link_to_product = "/" + I18n.locale.to_s + "/products/" + volume.product.id.to_s
+          if I18n.locale.to_s == 'en'
+            @link_to_product = "/products/" + volume.product.id.to_s
+          else
+            @link_to_product = "/ru/products/" + volume.product.id.to_s
+          end
           @link_to_img = volume.pic.thumbnail("300x300").url
         else
           @link_to_product = ""
@@ -25,7 +46,7 @@
         end
 
       %>
-      <li class="grid_3" data-type="<= type >">
+      <li class="grid_3" data-type="digital">
         <div class="hover-fx">
           
           <% if volume != nil %>
@@ -34,12 +55,10 @@
           <a class="fRight" href="<%= @link_to_product %>"><span><i class="icon-eye-open"></i></span></a>
         </div>
         <div class="detailes">
-          <h5> <a href="#">Sed ut perspiciatis unde</a> </h5>
-          <a href="#">3D Model</a>, <a href="#">Photography</a>
+          <h5> <a href="#"><%= product.name %></a> </h5>
+          <a href="#"><%= product.alco_type %></a>
         </div>
       <div>
-        <br>
-        <%= link_to product.name, refinery.products_product_path(product) %>
       </li>
     <% end %>
   </ul>
