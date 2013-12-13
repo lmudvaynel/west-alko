@@ -1,45 +1,15 @@
-<% content_for :body_content_title do %>
-  <%= @factory.name %>
-<% end %>
-
-<% content_for :body do %>
-  <section>
-    <h1>Name</h1>
-    <p>
-      <%=raw @factory.name %>
-    </p>
-  </section>
-  <section>
-    <h1>Description</h1>
-    <p>
-      <%=raw @factory.description %>
-    </p>
-  </section>
-  <section>
-    <h1>Description Short</h1>
-    <p>
-      <%=raw @factory.description_short %>
-    </p>
-  </section>
-  <section>
-    <h1>Title Image</h1>
-    <p>
-      <%= image_fu @factory.title_image, nil %>
-    </p>
-  </section>
-<% end %>
-
-<% content_for :side_body do %>
-  <aside>
-    <h2><%= t('.other') %></h2>
-    <ul id="factories">
-      <% @factories.each do |factory| %>
-        <li>
-          <%= link_to factory.name, refinery.factories_factory_path(factory) %>
-        </li>
-      <% end %>
-    </ul>
-  </aside>
-<% end %>
-
-<%= render '/refinery/content_page' %>
+<div class="page-content">
+    
+      <div class="row clearfix mbs">
+        <div class="grid_12">
+              <ul class="portfolio clearfix">
+                
+                <li class="grid_12" data-id="id-1" data-type="3d">
+                  <div class="hover-fx">
+                    <a href="images/factories/IMG_5519.jpg" data-gal="lightbox"><img src="images/factories/IMG_5519.jpg" alt="#"></a>
+                  </div>
+                </li>
+              </ul>
+        </div><!-- grid 12 -->
+      </div><!-- row -->
+    </div><!-- end page content -->
