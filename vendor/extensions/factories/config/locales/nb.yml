@@ -1,0 +1,30 @@
+nb:
+  refinery:
+    plugins:
+      factories:
+        title: Factories
+    factories:
+      admin:
+        factories:
+          actions:
+            create_new: Lag en ny Factory
+            reorder: Endre rekkefølgen på Factories
+            reorder_done: Ferdig å endre rekkefølgen Factories
+          records:
+            title: Factories
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Factories enda. Klikk på "Lag en ny Factory" for å legge til din første factory.
+          factory:
+            view_live_html: Vis hvordan denne factory ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne factory
+            delete: Fjern denne factory permanent
+      factories:
+        show:
+          other: Andre Factories
+  activerecord:
+    attributes:
+      'refinery/factories/factory':
+        name: Name
+        description: Description
+        description_short: Description Short
+        title_image_id: Title Image

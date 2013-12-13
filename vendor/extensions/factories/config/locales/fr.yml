@@ -1,0 +1,30 @@
+fr:
+  refinery:
+    plugins:
+      factories:
+        title: Factories
+    factories:
+      admin:
+        factories:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Factory
+            reorder: Réordonner les Factories
+            reorder_done: Fin de réordonnancement des Factories
+          records:
+            title: Factories
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Factory. Cliquer sur "Créer un(e) nouve(au/l/lle) Factory" pour créer votre premi(er/ère) factory.'
+          factory:
+            view_live_html: Voir ce(t/tte) factory <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) factory
+            delete: Supprimer définitivement ce(t/tte) factory
+      factories:
+        show:
+          other: Autres Factories
+  activerecord:
+    attributes:
+      'refinery/factories/factory':
+        name: Name
+        description: Description
+        description_short: Description Short
+        title_image_id: Title Image

@@ -6,6 +6,7 @@ module Refinery
       attr_accessible :name, :description, :description_short, :position, :make_type, :alco_type
 
       validates :name, :presence => true, :uniqueness => true
+      validates :make_type, :alco_type, :presence => true
 
       translates :name, :description, :description_short
 

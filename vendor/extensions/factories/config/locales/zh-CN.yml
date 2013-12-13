@@ -1,0 +1,32 @@
+zh-CN:
+  refinery:
+    plugins:
+      factories:
+        title: Factories
+    factories:
+      admin:
+        factories:
+          actions:
+            create_new: 建立新的 Factory
+            reorder: 对 Factories 重新排序
+            reorder_done: 对 Factories 的重新排序结束
+          records:
+            title: Factories
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Factories yet. Click "Add New Factory" to add your first factory.
+            no_items_yet: 目前没有 Factories . 点击 "Add New Factory" 创建一个factory.
+          factory:
+            view_live_html: 查看 factory 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 factory
+            delete: 永久删除 factory
+      factories:
+        show:
+          other: 其他 Factories
+  activerecord:
+    attributes:
+      'refinery/factories/factory':
+        name: Name
+        description: Description
+        description_short: Description Short
+        title_image_id: Title Image

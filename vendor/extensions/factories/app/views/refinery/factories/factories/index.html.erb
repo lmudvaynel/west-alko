@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="factories">
+    <% @factories.each do |factory| %>
+      <li>
+        <%= link_to factory.name, refinery.factories_factory_path(factory) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

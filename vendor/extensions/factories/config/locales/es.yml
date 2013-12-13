@@ -1,0 +1,31 @@
+es:
+  refinery:
+    plugins:
+      factories:
+        title: Factories
+#        article: masculino/femenino
+    factories:
+      admin:
+        factories:
+          actions:
+            create_new: Crear nuevo factory
+            reorder: Reordenar factories
+            reorder_done: Reordenación de factories completada
+          records:
+            title: Factories
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay factories todavía. Pulsa en "Crear nuevo Factory" para crear tu primer factory.
+          factory:
+            view_live_html: Ver este factory como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este factory
+            delete: Borrar este factory para siempre
+      factories:
+        show:
+          other: Otros factories
+  activerecord:
+    attributes:
+      'refinery/factories/factory':
+        name: Name
+        description: Description
+        description_short: Description Short
+        title_image_id: Title Image

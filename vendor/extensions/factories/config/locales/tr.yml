@@ -1,0 +1,30 @@
+tr:
+  refinery:
+    plugins:
+      factories:
+        title: Factories
+    factories:
+      admin:
+        factories:
+          actions:
+            create_new: Yeni Ekle Factory
+            reorder: Tekrar sirala Factories
+            reorder_done: Tekrar siralama tamamlandiFactories
+          records:
+            title: Factories
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Factories yok henuz.  Tikla "Yeni Ekle Factory" eklemek senin ilk factory.
+          factory:
+            view_live_html: Bunu canlu factory goruntule <br/><em>(yeni bir pencerede acar)</em>
+            edit: Bunu Duzenle factory
+            delete: Bunu Sil factory sonsuza dek
+      factories:
+        show:
+          other: Diger Factories
+  activerecord:
+    attributes:
+      'refinery/factories/factory':
+        name: Name
+        description: Description
+        description_short: Description Short
+        title_image_id: Title Image

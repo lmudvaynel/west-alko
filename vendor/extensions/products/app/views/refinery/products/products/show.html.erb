@@ -1,13 +1,22 @@
+<%
+  if I18n.locale.to_s == "en"
+    type = @product.make_type
+  else
+    case @product.make_type
+    when "own"
+      type = "свое"
+    when "foreign"
+      type = "чужое"
+    else
+      type = "разлив"
+    end
+  end
+%>
+
+
 <div class="breadcrumb-place">
   <div class="row clearfix">
-    <h3 class="page-title"> Portfolio Item </h3>
-    <div class="breadcrumbIn">
-      <span> You are here: </span>
-      <ul>
-        <li><a href="index.html" title="Homepage"> <i class="icon-home"></i> </a></li>
-        <li> QUIS AUTEM VEL EUM IURE </li>
-      </ul>
-    </div><!-- breadcrumbIn -->
+    <h3 class="page-title"> <%= type %> </h3>
   </div><!-- row -->
 </div><!-- breadcrumb -->
 

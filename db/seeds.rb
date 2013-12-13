@@ -14,3 +14,6 @@ Refinery::Products::Engine.load_seed
 
 # Added by Refinery CMS Volumes extension
 Refinery::Volumes::Engine.load_seed
+
+# Added by Refinery CMS Factories extension
+Refinery::Factories::Engine.load_seed

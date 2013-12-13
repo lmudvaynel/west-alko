@@ -1,0 +1,30 @@
+nl:
+  refinery:
+    plugins:
+      factories:
+        title: Factories
+    factories:
+      admin:
+        factories:
+          actions:
+            create_new: Nieuwe Factory toevoegen
+            reorder: De volgorde van de Factories wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Factory-volgorde
+          records:
+            title: Factories
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Factories. Druk op 'Nieuwe Factory toevoegen' om de eerste toe te voegen.
+          factory:
+            view_live_html: Deze factory op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            edit: Bewerk deze factory
+            delete: Deze factory definitief verwijderen
+      factories:
+        show:
+          other: Andere Factories
+  activerecord:
+    attributes:
+      'refinery/factories/factory':
+        name: Name
+        description: Description
+        description_short: Description Short
+        title_image_id: Title Image

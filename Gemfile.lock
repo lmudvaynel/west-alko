@@ -1,6 +1,8 @@
 PATH
   remote: vendor/extensions
   specs:
+    refinerycms-factories (1.0)
+      refinerycms-core (~> 2.1.1)
     refinerycms-products (1.0)
       refinerycms-core (~> 2.1.1)
     refinerycms-volumes (1.0)
@@ -195,6 +197,7 @@ DEPENDENCIES
   rails (= 3.2.15)
   refinerycms (~> 2.1.0)
   refinerycms-acts-as-indexed (~> 1.0.0)
+  refinerycms-factories!
   refinerycms-products!
   refinerycms-volumes!
   sass-rails (~> 3.2.3)

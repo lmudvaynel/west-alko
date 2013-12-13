@@ -1,0 +1,30 @@
+cs:
+  refinery:
+    plugins:
+      factories:
+        title: Factories
+    factories:
+      admin:
+        factories:
+          actions:
+            create_new: Přidat Factory
+            reorder: Řadit Factories
+            reorder_done: Konec řazení Factories
+          records:
+            title: Factories
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Factories. Zvolte "Přidat Factory" pro přidání prvního factory.
+          factory:
+            view_live_html: Zobrazit náhled factory<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit factory
+            delete: Smazat factory
+      factories:
+        show:
+          other: Další Factories
+  activerecord:
+    attributes:
+      'refinery/factories/factory':
+        name: Name
+        description: Description
+        description_short: Description Short
+        title_image_id: Title Image

@@ -51,3 +51,4 @@ gem 'refinerycms-acts-as-indexed', '~> 1.0.0'
 
 gem 'refinerycms-products', :path => 'vendor/extensions'
 gem 'refinerycms-volumes', :path => 'vendor/extensions'
+gem 'refinerycms-factories', :path => 'vendor/extensions'

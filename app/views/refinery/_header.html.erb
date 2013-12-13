@@ -32,9 +32,7 @@
                 <% else %>
                   <li>
                 <% end %>
-                <% if page.id == 1 %>
-                  <a href="<%= @link_to_product %>"><%= page.path %></a>
-                <% elsif page.id == 4 %>                    
+                <% if page.id == 4 %>                    
                   <a href="<%= @link_to_product %>products"><%= page.path %></a>
                   <ul>
                     <li>
@@ -48,7 +46,7 @@
                     </li>
                   </ul>
                 <% else %>
-                  <a href="<%= @link_to_product + page.nested_url.first.to_s %>"><%= page.path %></a>
+                  <a href="<%= refinery.url_for(page.url) %>"><%= page.path %></a>
                 <% end %>
                 </li>
               <% end %>

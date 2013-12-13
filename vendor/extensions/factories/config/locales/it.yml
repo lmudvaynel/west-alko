@@ -1,0 +1,30 @@
+it:
+  refinery:
+    plugins:
+      factories:
+        title: Factories
+    factories:
+      admin:
+        factories:
+          actions:
+            create_new: Aggiungi Nuovo Factory
+            reorder: Riordina Factories
+            reorder_done: Termina il Riordino di Factories
+          records:
+            title: Factories
+            sorry_no_results: "Spiacenti! Nessun risultato trovato"
+            no_items_yet: Non ci sono ancora Factories. Clicca "Aggiungi Nuovo Factory" per aggiungere il tuo primo factory.
+          factory:
+            view_live_html: Guarda live questo factory <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo factory
+            delete: Rimuovi per sempre questo factory
+      factories:
+        show:
+          other: Altri Factories
+  activerecord:
+    attributes:
+      'refinery/factories/factory':
+        name: Name
+        description: Description
+        description_short: Description Short
+        title_image_id: Title Image
