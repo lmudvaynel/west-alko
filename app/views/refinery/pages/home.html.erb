@@ -11,8 +11,14 @@
       else 
         @display = ""
       end
-      if volume.product != nil 
-        @link_to_product = "/" + I18n.locale.to_s + "/products/" + volume.product.id.to_s  
+      if I18n.locale.to_s == 'en'
+        view = "View"
+        img = "Increase Image"
+        @link_to_product = "/products/" + volume.product.id.to_s
+      else
+        view = "Посмотреть"
+        img = "Увеличить Изображение"
+        @link_to_product = "/ru/products/" + volume.product.id.to_s
       end
     %>
 
@@ -22,15 +28,15 @@
             <div class="co-info">
               <div class="co-info-front" style="background-image: url(<%= @path %>);"></div>
               <div class="co-info-back">
-                <a href="<%= @link_to_product %>">View</a>
-                <a href="#">Increase Image</a>
+                <a href="<%= @link_to_product %>"><%= view %></a>
+                <a href="#"><%= img %></a>
               </div>  
             </div>
           </div>
         </div>
         <div class="co-shadow"></div>
         <div class="co-title"><h3><%= volume.product.name %></h3></div>
-        <a class="co-link" href="<%= @link_to_product %>">Read More <i class="mii icon-angle-right"></i></a>
+        <a class="co-link" href="<%= @link_to_product %>"><%= view %> <i class="mii icon-angle-right"></i></a>
       </li>
   <% end %>
     <nav>
