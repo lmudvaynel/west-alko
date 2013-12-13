@@ -3,7 +3,7 @@
   <% @first = true %>  
   <% Refinery::Volumes::Volume.where("used_in_home = ?", true) .each do |volume| %>
     <% 
-      @path = volume.pic.thumbnail("300x300c").url
+      @path = volume.pic.thumbnail("300x300").url
 
       if @first == true 
         @display = "style=display:block;"

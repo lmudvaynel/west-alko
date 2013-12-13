@@ -53,11 +53,14 @@
                 </li>
               <% end %>
               <li>
-                <% if I18n.locale.to_s == 'en' %>
-                  <a href="<%= @page.url %>">EN</a>
-                <% else %>
-                  <a href="<%= @page.url %>">RU</a>
-                <% end %>
+                <% 
+                  if I18n.locale.to_s == 'en'
+                    lang = :ru
+                  else
+                    lang = :en
+                  end 
+                %>
+                <%= link_to Refinery::I18n.locales[lang], refinery.url_for(:locale => lang) %>
               </li>
             </ul><!-- end menu -->
           </nav><!-- end nav -->
