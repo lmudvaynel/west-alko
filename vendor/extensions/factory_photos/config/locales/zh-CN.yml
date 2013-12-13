@@ -1,0 +1,31 @@
+zh-CN:
+  refinery:
+    plugins:
+      factory_photos:
+        title: Factory Photos
+    factory_photos:
+      admin:
+        factory_photos:
+          actions:
+            create_new: 建立新的 Factory Photo
+            reorder: 对 Factory Photos 重新排序
+            reorder_done: 对 Factory Photos 的重新排序结束
+          records:
+            title: Factory Photos
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Factory Photos yet. Click "Add New Factory Photo" to add your first factory photo.
+            no_items_yet: 目前没有 Factory Photos . 点击 "Add New Factory Photo" 创建一个factory photo.
+          factory_photo:
+            view_live_html: 查看 factory photo 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 factory photo
+            delete: 永久删除 factory photo
+      factory_photos:
+        show:
+          other: 其他 Factory Photos
+  activerecord:
+    attributes:
+      'refinery/factory_photos/factory_photo':
+        description: Description
+        description_short: Description Short
+        image_id: Image

@@ -8,7 +8,11 @@
 
   <div class='field'>
     Choose 
-    <%= f.collection_select :product_id, Refinery::Products::Product.all,:id,:name, include_blank: true %>
+    <% if @volume.product !=nil %>
+      <%= f.collection_select :product_id, Refinery::Products::Product.all,:id,:name, :selected => @volume.product.id %>
+    <% else %>
+      <%= f.collection_select :product_id, Refinery::Products::Product.all,:id,:name %>
+    <% end %>
   </div>
   
   <div class='field'>

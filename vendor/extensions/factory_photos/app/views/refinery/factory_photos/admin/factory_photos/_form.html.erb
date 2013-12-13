@@ -1,0 +1,45 @@
+<%= form_for [refinery, :factory_photos_admin, @factory_photo] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @factory_photo,
+              :include_object_name => true %>
+
+  <%= render '/refinery/admin/locale_picker',
+              :current_locale => Globalize.locale %>
+  
+  <div class='field'>
+    <% if @factory_photo != nil %>
+      <%= f.collection_select :factory_id, Refinery::Factories::Factory.all,:id,:name, :selected => @factory_photo.id %>
+    <% else %>
+      <%= f.collection_select :factory_id, Refinery::Factories::Factory.all,:id,:name %>
+    <% end %>
+  </div>
+
+  <div class='field'>
+    <%= render '/refinery/admin/wysiwyg',
+                :f => f,
+                :fields => [:description, :description_short],
+                :object => "factory_photos/factory_photo" -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :image -%>
+    <%= render '/refinery/admin/image_picker',
+               :f => f,
+               :field => :image_id,
+               :image => @factory_photo.image,
+               :toggle_image_display => false -%>
+  </div>
+
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.factory_photos.admin.factory_photos.factory_photo'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete') -%>
+<% end -%>
+
+<% content_for :javascripts do -%>
+  <script>
+    $(document).ready(function(){
+      page_options.init(false, '', '');
+    });
+  </script>
+<% end -%>

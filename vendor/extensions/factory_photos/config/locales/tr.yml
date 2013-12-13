@@ -1,0 +1,29 @@
+tr:
+  refinery:
+    plugins:
+      factory_photos:
+        title: Factory Photos
+    factory_photos:
+      admin:
+        factory_photos:
+          actions:
+            create_new: Yeni Ekle Factory Photo
+            reorder: Tekrar sirala Factory Photos
+            reorder_done: Tekrar siralama tamamlandiFactory Photos
+          records:
+            title: Factory Photos
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Factory Photos yok henuz.  Tikla "Yeni Ekle Factory Photo" eklemek senin ilk factory photo.
+          factory_photo:
+            view_live_html: Bunu canlu factory photo goruntule <br/><em>(yeni bir pencerede acar)</em>
+            edit: Bunu Duzenle factory photo
+            delete: Bunu Sil factory photo sonsuza dek
+      factory_photos:
+        show:
+          other: Diger Factory Photos
+  activerecord:
+    attributes:
+      'refinery/factory_photos/factory_photo':
+        description: Description
+        description_short: Description Short
+        image_id: Image

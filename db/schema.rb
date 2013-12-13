@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131213134457) do
+ActiveRecord::Schema.define(:version => 20131213151503) do
 
   create_table "refinery_factories", :force => true do |t|
     t.string   "name"
@@ -21,6 +21,28 @@ ActiveRecord::Schema.define(:version => 20131213134457) do
     t.integer  "position"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
+  end
+
+  create_table "refinery_factory_photo_translations", :force => true do |t|
+    t.integer  "refinery_factory_photo_id"
+    t.string   "locale",                    :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+    t.text     "description"
+    t.text     "description_short"
+  end
+
+  add_index "refinery_factory_photo_translations", ["locale"], :name => "index_refinery_factory_photo_translations_on_locale"
+  add_index "refinery_factory_photo_translations", ["refinery_factory_photo_id"], :name => "index_ca1d46dc82943d165a95e535c859b092747657a8"
+
+  create_table "refinery_factory_photos", :force => true do |t|
+    t.text     "description"
+    t.text     "description_short"
+    t.integer  "image_id"
+    t.integer  "position"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+    t.integer  "factory_id"
   end
 
   create_table "refinery_factory_translations", :force => true do |t|

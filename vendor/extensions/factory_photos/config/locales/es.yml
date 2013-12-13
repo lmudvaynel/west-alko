@@ -1,0 +1,30 @@
+es:
+  refinery:
+    plugins:
+      factory_photos:
+        title: Factory Photos
+#        article: masculino/femenino
+    factory_photos:
+      admin:
+        factory_photos:
+          actions:
+            create_new: Crear nuevo factory photo
+            reorder: Reordenar factory photos
+            reorder_done: Reordenación de factory photos completada
+          records:
+            title: Factory Photos
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay factory photos todavía. Pulsa en "Crear nuevo Factory Photo" para crear tu primer factory photo.
+          factory_photo:
+            view_live_html: Ver este factory photo como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este factory photo
+            delete: Borrar este factory photo para siempre
+      factory_photos:
+        show:
+          other: Otros factory photos
+  activerecord:
+    attributes:
+      'refinery/factory_photos/factory_photo':
+        description: Description
+        description_short: Description Short
+        image_id: Image

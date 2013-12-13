@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::FactoryPhotos::Admin::FactoryPhotosController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.factory_photos_admin_factory_photos_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_factory_photos_admin_factory_photo_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::FactoryPhotos::Admin::FactoryPhotosController.sortable? && ::Refinery::FactoryPhotos::FactoryPhoto.many? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Factory Photos"),
+                 refinery.factory_photos_admin_factory_photos_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Factory Photos"),
+                 refinery.factory_photos_admin_factory_photos_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

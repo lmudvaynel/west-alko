@@ -1,0 +1,29 @@
+fr:
+  refinery:
+    plugins:
+      factory_photos:
+        title: Factory Photos
+    factory_photos:
+      admin:
+        factory_photos:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Factory Photo
+            reorder: Réordonner les Factory Photos
+            reorder_done: Fin de réordonnancement des Factory Photos
+          records:
+            title: Factory Photos
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Factory Photo. Cliquer sur "Créer un(e) nouve(au/l/lle) Factory Photo" pour créer votre premi(er/ère) factory photo.'
+          factory_photo:
+            view_live_html: Voir ce(t/tte) factory photo <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) factory photo
+            delete: Supprimer définitivement ce(t/tte) factory photo
+      factory_photos:
+        show:
+          other: Autres Factory Photos
+  activerecord:
+    attributes:
+      'refinery/factory_photos/factory_photo':
+        description: Description
+        description_short: Description Short
+        image_id: Image

@@ -1,0 +1,29 @@
+nb:
+  refinery:
+    plugins:
+      factory_photos:
+        title: Factory Photos
+    factory_photos:
+      admin:
+        factory_photos:
+          actions:
+            create_new: Lag en ny Factory Photo
+            reorder: Endre rekkefølgen på Factory Photos
+            reorder_done: Ferdig å endre rekkefølgen Factory Photos
+          records:
+            title: Factory Photos
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Factory Photos enda. Klikk på "Lag en ny Factory Photo" for å legge til din første factory photo.
+          factory_photo:
+            view_live_html: Vis hvordan denne factory photo ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne factory photo
+            delete: Fjern denne factory photo permanent
+      factory_photos:
+        show:
+          other: Andre Factory Photos
+  activerecord:
+    attributes:
+      'refinery/factory_photos/factory_photo':
+        description: Description
+        description_short: Description Short
+        image_id: Image

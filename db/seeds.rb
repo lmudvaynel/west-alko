@@ -17,3 +17,6 @@ Refinery::Volumes::Engine.load_seed
 
 # Added by Refinery CMS Factories extension
 Refinery::Factories::Engine.load_seed
+
+# Added by Refinery CMS FactoryPhotos extension
+Refinery::FactoryPhotos::Engine.load_seed

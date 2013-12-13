@@ -1,0 +1,29 @@
+sk:
+  refinery:
+    plugins:
+      factory_photos:
+        title: Factory Photos
+    factory_photos:
+      admin:
+        factory_photos:
+          actions:
+            create_new: Pridať Factory Photo
+            reorder: Preusporiadať Factory Photos
+            reorder_done: Koniec radenia Factory Photos
+          records:
+            title: Factory Photos
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Factory Photos. Kliknite na "Pridať Factory Photo" pre pridanie prvého factory photo.
+          factory_photo:
+            view_live_html: Zobraziť náhľad factory photo<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť factory photo
+            delete: Zmazať factory photo
+      factory_photos:
+        show:
+          other: Daľšie Factory Photos
+  activerecord:
+    attributes:
+      'refinery/factory_photos/factory_photo':
+        description: Description
+        description_short: Description Short
+        image_id: Image
