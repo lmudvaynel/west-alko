@@ -52,6 +52,13 @@
                 <% end %>
                 </li>
               <% end %>
+              <li>
+                <% if I18n.locale.to_s == 'en' %>
+                  <a href="<%= @page.url %>">EN</a>
+                <% else %>
+                  <a href="<%= @page.url %>">RU</a>
+                <% end %>
+              </li>
             </ul><!-- end menu -->
           </nav><!-- end nav -->
         </div><!-- row -->

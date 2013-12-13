@@ -34,7 +34,11 @@
       <% 
         volume = Refinery::Volumes::Volume.find(:first, :conditions => ['product_id = ?', product.id])
         if volume != nil
-          @link_to_product = "/" + I18n.locale.to_s + "/products/" + volume.product.id.to_s
+          if I18n.locale.to_s == 'en'
+            @link_to_product = "/products/" + volume.product.id.to_s
+          else
+            @link_to_product = "/ru/products/" + volume.product.id.to_s
+          end
           @link_to_img = volume.pic.thumbnail("300x300").url
         else
           @link_to_product = ""

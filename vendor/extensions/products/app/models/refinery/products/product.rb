@@ -3,7 +3,7 @@ module Refinery
     class Product < Refinery::Core::BaseModel
       self.table_name = 'refinery_products'
 
-      attr_accessible :name, :description, :description_short, :position
+      attr_accessible :name, :description, :description_short, :position, :make_type, :alco_type
 
       translates :name, :description, :description_short
 
