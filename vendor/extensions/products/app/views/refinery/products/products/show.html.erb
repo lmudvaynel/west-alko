@@ -1,22 +1,7 @@
-<%
-  if I18n.locale.to_s == "en"
-    type = @product.make_type
-  else
-    case @product.make_type
-    when "own"
-      type = "свое"
-    when "foreign"
-      type = "чужое"
-    else
-      type = "разлив"
-    end
-  end
-%>
-
-
 <div class="breadcrumb-place">
   <div class="row clearfix">
-    <h3 class="page-title"> <%= type %> </h3>
+    <!-- this from application helper yes i can do that way -->
+    <h3 class="page-title"> <%= which_make_type_list[product.make_type.to_sym()] %> </h3>
   </div><!-- row -->
 </div><!-- breadcrumb -->
 
@@ -25,26 +10,11 @@
     <div class="single-first-row mb clearfix">
       <h4> <%= @product.name %> </h4>
 
-      <% 
-        if  I18n.locale.to_s == "en" 
-          next_product = "Next"
-          prev_product = "Previous"
-          all_product = "All Product"
-          path_all_product = "/products"
-          desc_product = "Product Description"
-        else
-          next_product = "Следующий"
-          prev_product = "Предыдущий"
-          all_product = "Все Продукты"
-          path_all_product = "/ru/products"
-          desc_product = "Описание продукта"
-        end
-      %>
 
       <div class="project-links">
-        <a href="<%= @product.id %>"><i class="icon-angle-left mi"></i><%= prev_product %></a>
-        <a href="<%= path_all_product %>"> <i class="icon-th toptip" title="<%= all_product %>"></i> </a>
-        <a href="<%= @product.id %>"><%= next_product %><i class="icon-angle-right mii"></i></a>
+        <a href="<%= @product.id %>"><i class="icon-angle-left mi"></i><%= "which_navigation_list(:prev_product)" %></a>
+        <a href="<%= get_products.url %>"> <i class="icon-th toptip" title="<%= which_navigation_list[:all_product] %>"></i> </a>
+        <a href="<%= @product.id %>"><%= which_navigation_list[:next_product] %><i class="icon-angle-right mii"></i></a>
       </div><!-- links -->
     </div><!-- first row -->
 
@@ -80,7 +50,7 @@
     </div><!-- grid 9 -->
 
     <div class="grid_6">
-      <h4 class="mb"> <%= desc_product %> </h4>
+      <h4 class="mb"> <%= which_navigation_list[:desc_product] %> </h4>
       <%=raw @product.description %>
     </div><!-- grid 3 -->
   </div><!-- row -->

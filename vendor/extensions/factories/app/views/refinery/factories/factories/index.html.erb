@@ -11,25 +11,15 @@
 
   <ul class="portfolio clearfix">
     <% @factories.each do |factory| %>
-      <% 
-        if I18n.locale.to_s == 'en'
-          @link_to_factory = "/factories/" + factory.id.to_s
-        else
-          @link_to_factory = "/ru/factories/" + factory.id.to_s
-        end
-        if factory.title_image != nil
-          @link_to_img = factory.title_image.url
-        else 
-          @link_to_img = ""
-        end
-      %>
       <li class="grid_6" data-type="digital">
         <div class="hover-fx">
-          <img src="<%= @link_to_img %>">
-          <a class="fRight" href="<%= @link_to_factory %>"><span><i class="icon-eye-open"></i></span></a>
+          <% if factory.title_image != nil %>
+            <img src="<%= factory.title_image.url %>">
+          <% end %>
+          <a class="fRight" href="<%= get_factories.url %>/<%= factory.id %>"><span><i class="icon-eye-open"></i></span></a>
         </div>
         <div class="detailes">
-          <h5> <a href="<%= @link_to_factory %>"><%= factory.name %></a> </h5>
+          <h5> <a href="<%= get_factories.url %>/<%= factory.id %>"><%= factory.name %></a> </h5>
         </div>
       <div>
       </li>

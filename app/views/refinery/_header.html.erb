@@ -19,19 +19,19 @@
                 <% if page.slug == "products" %>
                   <%= link_to Refinery::Page.find('products').path, Refinery::Page.find('products').url %>
                   <ul>  
-                  <% which_type_list(I18n.locale).each do |key,value| %>
+                  <% which_make_type_list.each do |key,value| %>
                     <li>
-                      <%= link_to value, page.url, :make => key %>    
+                      <%= link_to value, page.url, :make => key %>  
                     </li>
-                    <% end %>
+                  <% end %>
                   </ul> 
                 <% else %>
-                  <%= link_to page.path, page.url %>
+                  <%= "link_to page.path, page.url" %>
                 <% end %>
                 </li>
               <% end %>
               <li>
-                <%= link_for_lang(I18n.locale) %>
+                <%= link_for_lang %>
               </li>
             </ul><!-- end menu -->
           </nav><!-- end nav -->
