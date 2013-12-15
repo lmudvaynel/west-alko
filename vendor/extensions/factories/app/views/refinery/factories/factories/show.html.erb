@@ -3,12 +3,13 @@
       <div class="row clearfix mbs">
         <div class="grid_12">
               <ul class="portfolio clearfix">
-                
-                <li class="grid_12" data-id="id-1" data-type="3d">
+                <% Refinery::FactoryPhotos::FactoryPhoto.where("factory_id = ?", params[:id]).each do |obj| %>
+                <li class="grid_12">
                   <div class="hover-fx">
-                    <a href="images/factories/IMG_5519.jpg" data-gal="lightbox"><img src="images/factories/IMG_5519.jpg" alt="#"></a>
+                    <a href="<%= obj.image.url %>" data-gal="lightbox"><img src="<%= obj.image.url %>"></a>
                   </div>
                 </li>
+                <% end %>
               </ul>
         </div><!-- grid 12 -->
       </div><!-- row -->

@@ -6,59 +6,32 @@
   </div><!-- row -->
 </div><!-- head -->
 
-<%
-  if I18n.locale.to_s == "en"
-    @link_to_product = "/"
-    own = "Own"
-    foreign = "Foreign"
-    flood = "Flood"
-  else
-    @link_to_product = "/ru/"
-    own = "Свое"
-    foreign = "Чужое"
-    flood = "Разлив"
-  end
-%>
-
 <div class="headdown my_sticky">        
     <div class="row clearfix">
           <nav>
             <ul class="sf-menu">
-              <% first = true %>
               <% Refinery::Page.where("show_in_menu != ?",false).order("lft ASC").each do |page| %>
-                <% if first == true %>
+                <% if page.path == @page.path %>
                   <li class="selectedLava">
-                  <% first = false %>
                 <% else %>
                   <li>
                 <% end %>
-                <% if page.id == 4 %>                    
-                  <a href="<%= @link_to_product %>products"><%= page.path %></a>
-                  <ul>
+                <% if page.slug == "products" %>
+                  <%= link_to Refinery::Page.find('products').path, Refinery::Page.find('products').url %>
+                  <ul>  
+                  <% which_type_list(I18n.locale).each do |key,value| %>
                     <li>
-                      <a href="<%= @link_to_product %>products?make=own"><%= own %></a>
+                      <%= link_to value, page.url, :make => key %>    
                     </li>
-                    <li>
-                      <a href="<%= @link_to_product %>products?make=flood"><%= flood %></a>
-                    </li>
-                    <li>
-                      <a href="<%= @link_to_product %>products?make=foreign"><%= foreign %></a>
-                    </li>
-                  </ul>
+                    <% end %>
+                  </ul> 
                 <% else %>
-                  <a href="<%= refinery.url_for(page.url) %>"><%= page.path %></a>
+                  <%= link_to page.path, page.url %>
                 <% end %>
                 </li>
               <% end %>
               <li>
-                <% 
-                  if I18n.locale.to_s == 'en'
-                    lang = :ru
-                  else
-                    lang = :en
-                  end 
-                %>
-                <%= link_to Refinery::I18n.locales[lang], refinery.url_for(:locale => lang) %>
+                <%= link_for_lang(I18n.locale) %>
               </li>
             </ul><!-- end menu -->
           </nav><!-- end nav -->
