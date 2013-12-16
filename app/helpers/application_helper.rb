@@ -27,8 +27,8 @@ module ApplicationHelper
   end
 
   def mail_list
-    @types_en = {quick: 'Quick Contact', name: 'Increase Image', email: 'Quick Contact', message: 'Increase Image', send: ""} 
-    @types_ru = {quick: 'Быстрый Доступ', name: 'Увеличить Изобрвженеи', email: 'Quick Contact', message: 'Increase Image', send: ""}
+    @types_en = {quick: 'Quick Contact', name: 'Name', email: 'Email Address', message: 'Message', send: "Send Email"} 
+    @types_ru = {quick: 'Обратная Связь', name: 'Имя', email: 'Электронная почта', message: 'Сообщение', send: "Отослать Эмайл"}
     I18n.locale == :en ? @types_en : @types_ru
   end
 
