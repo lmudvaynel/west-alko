@@ -26,6 +26,12 @@ module ApplicationHelper
     I18n.locale == :en ? @types_en : @types_ru
   end
 
+  def mail_list
+    @types_en = {quick: 'Quick Contact', name: 'Increase Image', email: 'Quick Contact', message: 'Increase Image', send: ""} 
+    @types_ru = {quick: 'Быстрый Доступ', name: 'Увеличить Изобрвженеи', email: 'Quick Contact', message: 'Increase Image', send: ""}
+    I18n.locale == :en ? @types_en : @types_ru
+  end
+
   def link_for_lang
     I18n.locale == :en ? lang = :ru : lang = :en
     link_to Refinery::I18n.locales[lang], refinery.url_for(:locale => lang)
