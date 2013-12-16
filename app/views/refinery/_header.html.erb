@@ -10,7 +10,8 @@
     <div class="row clearfix">
           <nav>
             <ul class="sf-menu">
-              <% Refinery::Page.where("show_in_menu != ?",false).order("lft ASC").each do |page| %>
+              <% # coding: utf-8 
+              Refinery::Page.where("show_in_menu != ?",false).order("lft ASC").each do |page| %>
                 <% if page.path == @page.path %>
                   <li class="selectedLava">
                 <% else %>

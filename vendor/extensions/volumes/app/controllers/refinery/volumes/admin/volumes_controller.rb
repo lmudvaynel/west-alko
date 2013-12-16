@@ -7,6 +7,16 @@ module Refinery
                 :title_attribute => 'price',
                 :xhr_paging => true
 
+        def destroy
+          # object gets found by find_volume function
+          title = @volume.product.name + @volume.price + @volume.volume
+          if @volume.destroy
+            flash.notice = t('destroyed', :scope => 'refinery.crudify', :what => "'#{title}'")
+          end
+
+          redirect_to redirect_url
+        end
+
       end
     end
   end

@@ -1,26 +1,28 @@
+# encoding: utf-8
+
 module ApplicationHelper
 
   def make_type_list
     @types_en = {own: 'Own', foreign: 'Foreign', flood:  'Flood'} 
-    @types_ru = {own: 'Sv', foreign: 'Ch', flood: 'Raz'}
+    @types_ru = {own: 'Свое', foreign: 'Чужое', flood: 'Разлив'}
     I18n.locale == :en ? @types_en : @types_ru
   end
 
   def alco_type_list
     @types_en = {all: 'All', vine: 'Vine', vodka: 'Vodka', whiskey: 'Whiske'} 
-    @types_ru = {all: 'Vse', vine: 'Vino', vodka: 'V', whiskey: 'Visk'}
+    @types_ru = {all: 'Все', vine: 'Вино', vodka: 'Водка', whiskey: 'Виски'}
     I18n.locale == :en ? @types_en : @types_ru
   end
 
   def navigation_list
-    @types_en = {next_product: 'Next', prev_product: 'Previous', all_product: 'Product', desc_product: 'roduct Description'} 
-    @types_ru = {next_product: 'sl', prev_product: 'pr', all_product: 'vse', desc_product: 'op'}
+    @types_en = {next_product: 'Next', prev_product: 'Previous', all_product: 'Product', desc_product: 'Рroduct Description'} 
+    @types_ru = {next_product: 'Следующий', prev_product: 'Предыдущий', all_product: 'Все', desc_product: 'Описание Продукта'}
     I18n.locale == :en ? @types_en : @types_ru
   end
 
   def home_list
     @types_en = {view: 'View', img: 'Increase Image'} 
-    @types_ru = {view: 'Prosmtr', img: 'uveli'}
+    @types_ru = {view: 'Посмотреть', img: 'Увеличить Изобрвженеи'}
     I18n.locale == :en ? @types_en : @types_ru
   end
 
