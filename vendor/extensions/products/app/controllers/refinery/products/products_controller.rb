@@ -19,6 +19,12 @@ module Refinery
         present(@page)
       end
 
+      def destory 
+        @product = Product.find(params[:id])
+        @product.destroy
+        redirect_to "/refinery"
+      end
+
     protected
 
       def find_all_products
