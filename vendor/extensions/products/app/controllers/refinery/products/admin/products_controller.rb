@@ -13,7 +13,9 @@ module Refinery
           title = @product.name
           
           Refinery::Volumes::Volume.where("product_id = ?",@product.id).each do |volume|
-            title += volume.id.to_s  
+            if volume.destroy
+              title += " "+volume.id.to_s 
+            end  
           end
           
           if @product.destroy
@@ -22,8 +24,6 @@ module Refinery
           
           redirect_to redirect_url
         end
-
-
         
       end
     end
