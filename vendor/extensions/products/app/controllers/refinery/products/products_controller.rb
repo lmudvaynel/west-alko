@@ -19,9 +19,12 @@ module Refinery
         present(@page)
       end
 
-      def destory 
+      def destroy 
         @product = Product.find(params[:id])
-        @product.destroy
+        Refinery::Volumes::Volume.where("product_id = ?",@product.id).each do |volume|
+          volume.destory!
+        end
+        @product.destroy!
         redirect_to "/refinery"
       end
 

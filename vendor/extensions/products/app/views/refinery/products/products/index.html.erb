@@ -2,9 +2,9 @@
   <div class="row clearfix mb">
     <div class="filterable">
       <ul class="filter">
-        <% which_alco_type_list.each do |key,value| %>
+        <% alco_type_list.each do |key,value| %>
           <li>
-            <%= link_to value, get_products.url, :alco => key %>    
+            <%= link_to value, get_products.url, :alco => key %>
           </li>
         <% end %>
       </ul>
@@ -22,11 +22,11 @@
           <% if volume.pic != nil %>
             <img src="<%= volume.pic.thumbnail("300x300").url %>" alt="#">
           <% end %>
-          <a class="fRight" href="<%= get_products.url %>/<%= volume.product.id %>"><span><i class="icon-eye-open"></i></span></a>
+          <a class="fRight" href="<%= url_for_product(volume.product) %>"><span><i class="icon-eye-open"></i></span></a>
         </div>
         <div class="detailes">
           <h5> <a href="#"><%= product.name %></a> </h5>
-          <a href="#"><%= "@which_alco_type_list[product.alco_type.to_sym]" %></a>
+          <a href="#"><%= alco_type_list[:"#{product.alco_type}"] %></a>
         </div>
       <div>
       </li>

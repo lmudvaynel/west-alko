@@ -3,40 +3,28 @@
   <% @first = true %>  
   <% Refinery::Volumes::Volume.where("used_in_home = ?", true) .each do |volume| %>
     <% 
-      @path = volume.pic.thumbnail("300x300").url
-
       if @first == true 
         @display = "style=display:block;"
         @first = false
       else 
         @display = ""
       end
-      if I18n.locale.to_s == 'en'
-        view = "View"
-        img = "Increase Image"
-        @link_to_product = "/products/" + volume.product.id.to_s
-      else
-        view = "Посмотреть"
-        img = "Увеличить Изображение"
-        @link_to_product = "/ru/products/" + volume.product.id.to_s
-      end
     %>
-
     <li class="co-item" <%= @display %>>
-        <div class="co-circle" style="background-image: url(<%= @path %>);">      
+        <div class="co-circle" style="background-image: url(<%= volume.pic.thumbnail("300x300").url %>);">      
           <div class="co-info-wrap">
             <div class="co-info">
-              <div class="co-info-front" style="background-image: url(<%= @path %>);"></div>
+              <div class="co-info-front" style="background-image: url(<%= volume.pic.thumbnail("300x300").url %>);"></div>
               <div class="co-info-back">
-                <a href="<%= @link_to_product %>"><%= view %></a>
-                <a href="#"><%= img %></a>
+                <a href="<%= url_for_product(volume.product) %>"><%= home_list[:view] %></a>
+                <a href="#"><%= home_list[:img] %></a>
               </div>  
             </div>
           </div>
         </div>
         <div class="co-shadow"></div>
         <div class="co-title"><h3><%= volume.product.name %></h3></div>
-        <a class="co-link" href="<%= @link_to_product %>"><%= view %> <i class="mii icon-angle-right"></i></a>
+        <a class="co-link" href="<%= url_for_product(volume.product) %>"><%= home_list[:view] %> <i class="mii icon-angle-right"></i></a>
       </li>
   <% end %>
     <nav>

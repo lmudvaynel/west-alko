@@ -3,7 +3,7 @@ module Refinery
     class FactoryPhoto < Refinery::Core::BaseModel
       self.table_name = 'refinery_factory_photos'
 
-      attr_accessible :description, :description_short, :image_id, :position, :factory_id
+      attr_accessible :title, :description, :description_short, :image_id, :position, :factory_id
 
       validates :factory_id, :presence => true
 

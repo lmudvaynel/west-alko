@@ -16,17 +16,17 @@
                 <% else %>
                   <li>
                 <% end %>
-                <% if page.slug == "products" %>
-                  <%= link_to Refinery::Page.find('products').path, Refinery::Page.find('products').url %>
+                <% if page.slug == "products" or page.slug == "продукция"%>
+                  <%= link_to get_products.path, get_products.url %>
                   <ul>  
-                  <% which_make_type_list.each do |key,value| %>
+                  <% make_type_list.each do |key,value| %>
                     <li>
-                      <%= link_to value, page.url, :make => key %>  
+                      <%= link_to value, refinery.url_for(page.url), :make => "key" %>  
                     </li>
                   <% end %>
                   </ul> 
                 <% else %>
-                  <%= "link_to page.path, page.url" %>
+                  <%= link_to page.path, refinery.url_for(page.url) %>
                 <% end %>
                 </li>
               <% end %>

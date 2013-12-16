@@ -14,20 +14,22 @@ module Refinery
         attr_accessible :locale
       end
 
-      def prev_product
-        self.class.first(:conditions => ["name < ?", name], :order => "name desc")
-      end
-
-      def next_product
-        self.class.first(:conditions => ["name > ?", name], :order => "name asc")
-      end
-
-      def previous
-        Post.where(["id < ?", id]).last
+      def prev
+        prod = Product.where(["id < ?", id]).last
+        if prod == nil
+          Product.where(["id > ?", id]).first
+        else
+          prod
+        end
       end
 
       def next
-        Post.where(["id > ?", id]).first
+        prod = Product.where(["id > ?", id]).first
+        if prod == nil
+          Product.where(["id < ?", id]).last
+        else
+          prod
+        end
       end
       
     end
