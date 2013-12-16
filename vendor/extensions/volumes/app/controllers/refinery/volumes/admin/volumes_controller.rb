@@ -9,7 +9,7 @@ module Refinery
 
         def destroy
           # object gets found by find_volume function
-          title = @volume.product.name + @volume.price + @volume.volume
+          title = @volume.product.name + " " +@volume.price + " " + @volume.volume
           if @volume.destroy
             flash.notice = t('destroyed', :scope => 'refinery.crudify', :what => "'#{title}'")
           end

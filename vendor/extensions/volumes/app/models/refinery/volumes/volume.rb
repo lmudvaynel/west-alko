@@ -5,10 +5,11 @@ module Refinery
 
       attr_accessible :price, :product_id, :volume, :pic_id, :position, :used_in_home
 
-      validates :product_id, :presence => true
-      
-      translates :price, :volume
+      validates :product_id, :product_id, :volume, :presence => true
 
+      validates :pic_id, :presence => true, :if => :used_in_home? 
+
+      translates :price, :volume
       class Translation
         attr_accessible :locale
       end

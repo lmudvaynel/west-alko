@@ -10,11 +10,11 @@ module Refinery
         def destroy
           @product = Product.find_by_id(params[:id])
           
-          Refinery::Volumes::Volume.where("product_id = ?",@product.id).each do |volume|
-            volume.destory
-          end
-          
           title = @product.name
+          
+          Refinery::Volumes::Volume.where("product_id = ?",@product.id).each do |volume|
+            title += volume.id.to_s  
+          end
           
           if @product.destroy
             flash.notice = t('destroyed', :scope => 'refinery.crudify', :what => "'#{title}'")
