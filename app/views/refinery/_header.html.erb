@@ -1,3 +1,29 @@
+<div class="extrabox">
+  <div class="row clearfix">
+    <div class="extra-content">
+      <div class="grid_8">
+        <div id="map1" class="official-map"></div>
+      </div>
+      <div class="grid_4">
+        <h3 class="col-title"> Quick Contact </h3><span class="liner"></span>
+        <div class="widget-content">
+          <form method="post" id="contactForm-widget" action="<%= "send me funny sory" %>">
+            <div class="clearfix">
+              <div class="grid_6 alpha fll"><input type="text" name="senderName" id="senderName" placeholder="Name *" class="requiredField" /></div>
+              <div class="grid_6 omega flr"><input type="text" name="senderEmail" id="senderEmail" placeholder="Email Address *" class="requiredField email" /></div>
+            </div>
+            <div><textarea name="message" id="message" placeholder="Message *" class="requiredField" rows="6"></textarea></div>
+            <input type="submit" id="sendMessage" name="sendMessage" value="Send Email" />
+            <span>  </span>
+          </form><!-- end form -->
+        </div><!-- widget content -->
+      </div><!-- grid 4 -->
+    </div><!-- extra content -->
+
+    <div class="arrow-down"><i class="icon-angle-down"></i></div><!-- arrow down -->
+  </div><!-- end row -->
+</div>  <!-- end extrabox -->
+
 <div class="head">
   <div class="row">
     <div class="logo" id="logo">
@@ -8,33 +34,33 @@
 
 <div class="headdown my_sticky">        
     <div class="row clearfix">
-          <nav>
-            <ul class="sf-menu">
-              <% # coding: utf-8 
-              Refinery::Page.where("show_in_menu != ?",false).order("lft ASC").each do |page| %>
-                <% if page.path == @page.path %>
-                  <li class="selectedLava">
-                <% else %>
-                  <li>
-                <% end %>
-                <% if page.slug == "products" or page.slug == "продукция"%>
-                  <%= link_to get_products.path, get_products.url %>
-                  <ul>  
-                  <% make_type_list.each do |key,value| %>
-                    <li>
-                      <%= link_to value, refinery.url_for(page.url), :make => "key" %>  
-                    </li>
-                  <% end %>
-                  </ul> 
-                <% else %>
-                  <%= link_to page.path, refinery.url_for(page.url) %>
-                <% end %>
+      <nav>
+        <ul class="sf-menu">
+        <% 
+          Refinery::Page.where("show_in_menu != ?",false).order("lft ASC").each do |page| %>
+            <% if page.path == @page.path %>
+              <li class="selectedLava">
+            <% else %>
+              <li>
+            <% end %>
+            <% if page.slug == "products" or page.slug == "продукция"%>
+              <%= link_to get_products.path, get_products.url %>
+              <ul>  
+              <% make_type_list.each do |key,value| %>
+                <li>
+                  <%= link_to value, refinery.url_for(page.url), :make => "key" %>  
                 </li>
               <% end %>
-              <li>
-                <%= link_for_lang %>
-              </li>
-            </ul><!-- end menu -->
-          </nav><!-- end nav -->
-        </div><!-- row -->
+              </ul> 
+            <% else %>
+              <%= link_to page.path, refinery.url_for(page.url) %>
+            <% end %>
+            </li>
+          <% end %>
+          <li>
+            <%= link_for_lang %>
+          </li>
+        </ul><!-- end menu -->
+      </nav><!-- end nav -->
+    </div><!-- row -->
 </div>

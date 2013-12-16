@@ -8,8 +8,6 @@ module Refinery
                 :xhr_paging => true
 
         def destroy
-          @product = Product.find_by_id(params[:id])
-          
           title = @product.name
           
           Refinery::Volumes::Volume.where("product_id = ?",@product.id).each do |volume|
