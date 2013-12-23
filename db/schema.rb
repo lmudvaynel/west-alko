@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131216002511) do
+ActiveRecord::Schema.define(:version => 20131249145250) do
 
   create_table "refinery_factories", :force => true do |t|
     t.string   "name"
@@ -42,7 +42,6 @@ ActiveRecord::Schema.define(:version => 20131216002511) do
     t.integer  "position"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
-    t.integer  "factory_id"
     t.string   "title"
   end
 
@@ -152,8 +151,8 @@ ActiveRecord::Schema.define(:version => 20131216002511) do
     t.integer  "position"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
-    t.string   "alco_type"
     t.string   "make_type"
+    t.string   "alco_type"
   end
 
   create_table "refinery_resources", :force => true do |t|
@@ -226,8 +225,8 @@ ActiveRecord::Schema.define(:version => 20131216002511) do
     t.integer  "position"
     t.datetime "created_at",                      :null => false
     t.datetime "updated_at",                      :null => false
-    t.integer  "product_id"
     t.boolean  "used_in_home", :default => false
+    t.integer  "product_id"
   end
 
   create_table "seo_meta", :force => true do |t|
