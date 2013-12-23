@@ -90,8 +90,6 @@ group :development, :test do
   gem 'cucumber-rails', :require => false
 end
 
-gem 'jquery-rails'
-
 gem 'refinerycms', '~> 2.1.0'
 
 gem 'refinerycms-acts-as-indexed', '~> 1.0.0'
