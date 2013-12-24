@@ -38,7 +38,7 @@
         <ul class="sf-menu">
         <% 
           Refinery::Page.where("show_in_menu != ?",false).order("lft ASC").each do |page| %>
-            <% if page.path == @page.path %>
+            <% if @page != nil and page.path == @page.path %>
               <li class="selectedLava">
             <% else %>
               <li>

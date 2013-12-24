@@ -46,10 +46,10 @@ module ApplicationHelper
   end
 
   def url_for_factory(factory)
-    if !factory
-      get_factories.url.to_s
+    if factory == nil
+      refinery.url_for(get_factories.url)
     else 
-      get_factories.url.to_s + "/" + factory.id.to_s
+      refinery.url_for(get_factories.url) + "/" + factory.id.to_s
     end
   end
 

@@ -1,5 +1,5 @@
 class AddTitleToRefineryFactoryPhotos < ActiveRecord::Migration
-  def change
+  def self.up
     add_column :refinery_factory_photos, :title, :string
   end
 end
