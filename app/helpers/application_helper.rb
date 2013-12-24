@@ -21,8 +21,8 @@ module ApplicationHelper
   end
 
   def home_list
-    @types_en = {view: 'View', img: 'Increase Image'} 
-    @types_ru = {view: 'Посмотреть', img: 'Увеличить Изобрвженеи'}
+    @types_en = {view: 'View', img: 'Next'} 
+    @types_ru = {view: 'Посмотреть', img: 'Следующий'}
     I18n.locale == :en ? @types_en : @types_ru
   end
 
@@ -46,7 +46,7 @@ module ApplicationHelper
   end
 
   def url_for_factory(factory)
-    if factory == nil
+    if !factory
       get_factories.url.to_s
     else 
       get_factories.url.to_s + "/" + factory.id.to_s

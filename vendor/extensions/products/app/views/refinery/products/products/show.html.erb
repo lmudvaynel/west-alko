@@ -1,7 +1,7 @@
 <div class="breadcrumb-place">
   <div class="row clearfix">
     <!-- this from application helper yes i can do that way -->
-    <h3 class="page-title"> <%= "which_make_type_list[product.make_type.to_sym()]" %> </h3>
+    <h3 class="page-title"> <%= make_type_list[:"#{@product.make_type}"] %> </h3>
   </div><!-- row -->
 </div><!-- breadcrumb -->
 
@@ -13,7 +13,7 @@
 
       <div class="project-links">
         <a href="<%= url_for_product(@product.prev) %>"><i class="icon-angle-left mi"></i><%= navigation_list[:prev_product] %></a>
-        <a href="<%= url_for_product %>"> <i class="icon-th toptip" title="<%= which_navigation_list[:all_product] %>"></i> </a>
+        <a href="<%= url_for_product(nil) %>"> <i class="icon-th toptip" title="<%= navigation_list[:all_product] %>"></i> </a>
         <a href="<%= url_for_product(@product.next) %>"><%= navigation_list[:next_product] %><i class="icon-angle-right mii"></i></a>
       </div><!-- links -->
     </div><!-- first row -->
