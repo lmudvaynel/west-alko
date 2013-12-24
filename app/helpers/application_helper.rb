@@ -45,6 +45,10 @@ module ApplicationHelper
     end
   end
 
+  def url_for_type(way, value)
+    get_products.url.to_s + "?" + way + "=" + value 
+  end
+
   def url_for_factory(factory)
     if factory == nil
       refinery.url_for(get_factories.url)

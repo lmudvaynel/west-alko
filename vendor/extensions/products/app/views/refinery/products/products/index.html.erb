@@ -4,7 +4,7 @@
       <ul class="filter">
         <% alco_type_list.each do |key,value| %>
           <li>
-            <%= link_to value, get_products.url, :alco => key %>
+            <a href="<%= url_for_type("alco",key.to_s) %>"> <%= value %> </a>
           </li>
         <% end %>
       </ul>
