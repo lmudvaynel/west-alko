@@ -19,7 +19,7 @@
       <% volume = Refinery::Volumes::Volume.find(:first, :conditions => ['product_id = ?', product.id]) %>
       <li class="grid_3" data-type="digital">
         <div class="hover-fx">   
-          <% if volume.pic != nil %>
+          <% if volume != nil and volume.pic != nil %>
             <img src="<%= volume.pic.thumbnail("300x300").url %>" alt="#">
           <% end %>
           <a class="fRight" href="<%= url_for_product(volume.product) %>"><span><i class="icon-eye-open"></i></span></a>
