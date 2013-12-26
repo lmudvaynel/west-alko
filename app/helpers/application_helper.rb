@@ -34,8 +34,17 @@ module ApplicationHelper
 
   def link_for_lang
     I18n.locale == :en ? lang = :ru : lang = :en
-    link_to Refinery::I18n.locales[lang], refinery.url_for(:locale => lang)
+    lang == :en ? pic = "English.png" : pic = "Russia.png"
+
+    link_to image_tag(pic, :size => "50x50", :border => 0), refinery.url_for(:locale => lang)
   end
+
+  
+  def url_for_home
+    page = Refinery::Page.where(:slug => 'домой').first
+    refinery.url_for(page.url)
+  end
+
 
   def url_for_product(product)
     if product == nil
