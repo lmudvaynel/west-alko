@@ -1,20 +1,20 @@
 development:
   adapter: mysql2
   encoding: utf8
-  database: west_alko_development
-  username: job
-  password: ''
+  database: west_alko_dev
+  username: root
+  password: 'Ghfdlbycr12mysql'
 
 test:
   adapter: mysql2
   encoding: utf8
   database: west_alko_test
-  username: job
-  password: ''
+  username: root
+  password: 'Ghfdlbycr12mysql'
 
 production:
   adapter: mysql2
   encoding: utf8
-  database: west_alko_production
-  username: job
+  database: west_alko_prod
+  username: root
   password: ''

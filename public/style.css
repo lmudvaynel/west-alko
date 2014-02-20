@@ -724,7 +724,7 @@ body[class^="frame_"] div.frame_10 { background: url(images/frames/10.png) repea
 .logo {
 	float: left;
 	margin: 30px 0;
-	width: 217px;
+	width: 800px;
 }
 .header_ads {
 	margin: 20px 0;
@@ -1231,7 +1231,7 @@ li li a .sf-sub-indicator {  border-bottom: 0 !important }
 
 .header_v4 .logo {
 	float: none;
-	margin: 30px auto;
+	margin: 0 auto;
 }
 .header_v4 .sf-menu {
 	float: none;
