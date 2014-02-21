@@ -4,7 +4,7 @@ module ApplicationHelper
 
   def make_type_list
     @types_en = {own: 'Own', foreign: 'Foreign', flood:  'Flood'} 
-    @types_ru = {own: 'Свое', foreign: 'Чужое', flood: 'Разлив'}
+    @types_ru = {own: 'Собственные марки', foreign: 'Привлеченные марки', flood: 'Разлив'}
     I18n.locale == :en ? @types_en : @types_ru
   end
 
