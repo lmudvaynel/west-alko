@@ -711,7 +711,7 @@ body[class^="frame_"] div.frame_10 { background: url(images/frames/10.png) repea
 
 .head {
 	position: relative;
-	background: #fff url(images/head.jpg) repeat-x top center;
+	background: #fff url(images/head.png) repeat-x top center;
 	border-top: 5px solid #191919;
 }
 .headBG {
