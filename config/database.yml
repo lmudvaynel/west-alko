@@ -3,18 +3,18 @@ development:
   encoding: utf8
   database: west_alko_dev
   username: root
-  password: admin
+  password: 'Ghfdlbycr12mysql'
 
 test:
   adapter: mysql2
   encoding: utf8
   database: west_alko_test
   username: root
-  password: admin
+  password: 'Ghfdlbycr12mysql'
 
 production:
   adapter: mysql2
   encoding: utf8
   database: west_alko_prod
   username: root
-  password: admin
+  password: ''
