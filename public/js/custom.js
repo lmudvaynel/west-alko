@@ -24,8 +24,18 @@ jQuery(document).ready(function ($) {
 	// Top Widget Map
 	if ($("#map1")[0]) {
 		jQuery("#map1").gmap3({
-			marker: {address: "2744 Los Angeles USA"},
-			map: {options: {zoom: 10}}
+			marker: {
+				values: [
+					{address:"Yaltinskaya 128, Kaliningrad Russia"}	,	
+					{address: "Pavlika Morozova 96 Kaliningrad Russia"},
+					{address: "Kaliningradskaya 23А Chernyahovsk Kaliningrad Russia"}
+				]
+			},
+			map: {options: {
+				zoom: 10,
+				center: [54.6338727, 21.7942737]
+				}
+			}
 		}).height('310');
 	}
 	// Content Big Map
