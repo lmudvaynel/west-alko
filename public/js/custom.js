@@ -24,8 +24,51 @@ jQuery(document).ready(function ($) {
 	// Top Widget Map
 	if ($("#map1")[0]) {
 		jQuery("#map1").gmap3({
-			marker: {address: "2744 Los Angeles USA"},
-			map: {options: {zoom: 10}}
+			map: {options: {
+				zoom: 8,
+				center: [55, 21.1]
+				}
+			},
+			marker:{
+		    values:[
+		      {
+		      	address:"Yaltinskaya 128, Kaliningrad Russia", 
+		      	data: '<img src="assets/itar.png"><font color="#000">Завод ИТАР: ул.Ялтинская 128</font>'
+		      },
+		      {
+		      	address: "Pavlika Morozova 96 Kaliningrad Russia", 
+		      	data: '<img src="assets/office.png"><font color="#000">Наш центральный офис: ул. Павлика Морозова 96</font>'},
+		      {
+		      	address: "Kaliningradskaya 23А Chernyahovsk Kaliningrad Russia", 
+		      	data: '<img src="assets/west-alko.png"><font color="#000">Завод Вест-Алко: г.Черняховск, ул. Калининградская 23А</font>'}
+		    ],
+	    options:{
+	      draggable: false
+	    },
+	    events:{
+	      mouseover: function(marker, event, context){
+	        var map = $(this).gmap3("get"),
+	          infowindow = $(this).gmap3({get:{name:"infowindow"}});
+	        if (infowindow){
+	          infowindow.open(map, marker);
+	          infowindow.setContent(context.data);
+	        } else {
+	          $(this).gmap3({
+	            infowindow:{
+	              anchor:marker, 
+	              options:{content: context.data}
+	            }
+	          });
+	        }
+	      },
+	      mouseout: function(){
+	        var infowindow = $(this).gmap3({get:{name:"infowindow"}});
+	        if (infowindow){
+	          infowindow.close();
+	        }
+	      }
+	    }
+	  }
 		}).height('310');
 	}
 	// Content Big Map
