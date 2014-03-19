@@ -3,14 +3,14 @@
 module ApplicationHelper
 
   def make_type_list
-    @types_en = {own: 'Own', foreign: 'Foreign', flood:  'Flood'} 
-    @types_ru = {own: 'Собственные марки', foreign: 'Привлеченные марки', flood: 'Разлив'}
+    @types_en = {own: 'Own', foreign: 'Foreign'} 
+    @types_ru = {own: 'Собственные марки', foreign: 'Привлеченные марки'}
     I18n.locale == :en ? @types_en : @types_ru
   end
 
   def alco_type_list
-    @types_en = {all: 'All', vine: 'Wine', vodka: 'Vodka', whiskey: 'Whiskey'} 
-    @types_ru = {all: 'Все', vine: 'Вино', vodka: 'Водка', whiskey: 'Виски'}
+    @types_en = {all: 'All', wine: 'Wine', vodka: 'Vodka', whiskey: 'Whiskey'} 
+    @types_ru = {all: 'Все', wine: 'Вино', vodka: 'Водка', whiskey: 'Виски'}
     I18n.locale == :en ? @types_en : @types_ru
   end
 

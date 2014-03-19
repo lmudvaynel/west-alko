@@ -176,7 +176,15 @@ mark {
 textarea { 
 	white-space:pre; 
 }
-
+footer {
+	height: 165px;
+	background: #fff url(images/head.png) repeat-x top center;
+}
+#page {
+	background-image: url('assets/bgbig.jpg');
+	background-attachment: fixed;
+	background-size: 100%;
+}
 /*	Grid >> Global
 ----------------------------------------------------------------------------------------------------*/
 .grid_1,
@@ -713,6 +721,7 @@ body[class^="frame_"] div.frame_10 { background: url(images/frames/10.png) repea
 	position: relative;
 	background: #fff url(images/head.png) repeat-x top center;
 	border-top: 5px solid #191919;
+	height: 165px;
 }
 .headBG {
 	width: 100%;
@@ -4733,6 +4742,9 @@ a.notification-close {
 
 /*	Footer
 ----------------------------------------------------------------------*/
+footer > p {
+	display: none;
+}
 #footer {
 	background: #333 url(images/footer-pattern.png) repeat;
 	padding: 50px 0 0;

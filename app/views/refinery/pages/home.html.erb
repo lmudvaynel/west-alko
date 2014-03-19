@@ -1,4 +1,4 @@
-<div class="sliderr parallax" data-stellar-background-ratio="0.9" style="background: url(<%= image_path('bg.jpg') %>);">
+<div class="sliderr parallax">
   <ul id="co-slider" class="co-slider">
   <% @first = true %>  
   <% Refinery::Volumes::Volume.where("used_in_home = ?", true) .each do |volume| %>

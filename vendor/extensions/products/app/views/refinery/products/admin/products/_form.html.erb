@@ -10,9 +10,9 @@
   <div class='field'>
     make 
     <% if @product !=nil %>
-      <%= f.select :make_type, options_for_select(["own", "flood", "foreign"],@product.make_type) %>
+      <%= f.select :make_type, options_for_select(["own", "foreign"],@product.make_type) %>
     <% else %>
-      <%= f.select :make_type, options_for_select(["own", "flood", "foreign"])%>
+      <%= f.select :make_type, options_for_select(["own", "foreign"])%>
     <% end %>
   </div>
 
@@ -20,9 +20,9 @@
   <div class='field'>
     alco
     <% if @product !=nil %>
-      <%= f.select :alco_type, options_for_select(["vine", "vodka", "whiskey"],@product.alco_type) %>
+      <%= f.select :alco_type, options_for_select(["wine", "vodka", "whiskey"],@product.alco_type) %>
     <% else %>
-      <%=f.select :alco_type, options_for_select(["vine", "vodka", "whiskey"])%>
+      <%=f.select :alco_type, options_for_select(["wine", "vodka", "whiskey"])%>
     <% end %>
   </div>
 

@@ -22,8 +22,8 @@ module Refinery
     protected
 
       def find_all_products
-        alco = ["vine","whiskey","vodka"]
-        make = ["own","flood","foreign"]
+        alco = ["wine","whiskey","vodka"]
+        make = ["own","foreign"]
         if make.include?(params[:make]) 
           @products = Product.where("make_type = ?", params[:make]).order('position ASC')
         elsif alco.include?(params[:alco]) 
