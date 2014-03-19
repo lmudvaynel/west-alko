@@ -180,11 +180,6 @@ footer {
 	height: 165px;
 	background: #fff url(images/head.png) repeat-x top center;
 }
-#page {
-	background-image: url('assets/bgbig.jpg');
-	background-attachment: fixed;
-	background-size: 100%;
-}
 /*	Grid >> Global
 ----------------------------------------------------------------------------------------------------*/
 .grid_1,
