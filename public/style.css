@@ -4422,7 +4422,7 @@ a.notification-close {
 	display: block;
 	color: #BFBFBF;
 	background: #fff;
-	height: 100%;
+	height: 60px;
 }
 .detailes h5 {
 	margin: 0 0 2px 0;
