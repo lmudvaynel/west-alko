@@ -22,8 +22,11 @@ jQuery(document).ready(function ($) {
 	$('[class^="scroll-"], [class*=" scroll-"]').niceScroll({zindex:1000000,cursorborder:"",cursorborderradius:"2px",cursorcolor:"#191919",scrollspeed:100,cursoropacitymin:.4,touchbehavior:true}); 
 	
 	// Resize window
-	doc_h = $(document).height();
-  $('#bg-wrap').css({'height': doc_h - 200 + "px"});
+	$( window ).resize(function () {
+		doc_h = $(document).height();
+	  $('#bg-wrap').css({'height': doc_h - 210 + "px"});		
+	});
+
 
 	// Top Widget Map
 	if ($("#map1")[0]) {
