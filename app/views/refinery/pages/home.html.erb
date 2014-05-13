@@ -1,5 +1,5 @@
-<div class="sliderr parallax" style="background: url(<%= image_path('bgbig.jpg') %>);background-attachment: fixed;
-  background-size: 100%;">
+<div id="bg-wrap" class="sliderr parallax" style="background: url(<%= image_path('bgbig.jpg') %>);background-attachment: fixed;
+  background-size: 100% 100%;">
   <ul id="co-slider" class="co-slider">
   <% @first = true %>  
   <% Refinery::Volumes::Volume.where("used_in_home = ?", true) .each do |volume| %>

@@ -20,6 +20,10 @@ jQuery(document).ready(function ($) {
 	var nice = $("html").niceScroll({zindex:1000000,cursorborder:"",cursorborderradius:"2px",cursorcolor:"#191919",cursoropacitymin:.5}); 
 	$("#div1").html($("#div1").html());
 	$('[class^="scroll-"], [class*=" scroll-"]').niceScroll({zindex:1000000,cursorborder:"",cursorborderradius:"2px",cursorcolor:"#191919",scrollspeed:100,cursoropacitymin:.4,touchbehavior:true}); 
+	
+	// Resize window
+	doc_h = $(document).height();
+  $('#bg-wrap').css({'height': doc_h - 200 + "px"});
 
 	// Top Widget Map
 	if ($("#map1")[0]) {
