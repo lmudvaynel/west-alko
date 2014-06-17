@@ -24,12 +24,12 @@ module Refinery
       def find_all_products
         alco = ["wine","whiskey","vodka"]
         make = ["own","foreign"]
-        if make.include?(params[:make]) 
-          @products = Product.where("make_type = ?", params[:make]).order('position ASC')
+        if make.include?(params[:make]) and alco.include?(params[:alco])
+          @products = Product.where("make_type = ? and alco_type = ?", params[:make], params[:alco]).order('position ASC')
         elsif alco.include?(params[:alco]) 
           @products = Product.where("alco_type = ?", params[:alco]).order('position ASC')
-        elsif make.include?(params[:make]) and alco.include?(params[:alco])
-          @products = Product.where("make_type = ?, alco_type = ? ", params[:make], params[:alco]).order('position ASC')
+        elsif make.include?(params[:make])
+          @products = Product.where("make_type = ?", params[:make]).order('position ASC')
         else
           @products = Product.order('position ASC')
         end

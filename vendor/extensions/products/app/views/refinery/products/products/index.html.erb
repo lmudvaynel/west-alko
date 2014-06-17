@@ -2,9 +2,17 @@
   <div class="row clearfix mb">
     <div class="filterable">
       <ul class="filter">
+        <%  
+          make = " "
+          if params[:make] and params[:make]=="own"
+            make = "own"
+          elsif params[:make]
+            make = "foreign"
+          end
+        %>
         <% alco_type_list.each do |key,value| %>
           <li>
-            <a href="<%= url_for_type("alco",key.to_s) %>"> <%= value %> </a>
+            <a href="<%= url_for_type("alco",key.to_s,make) %>"> <%= value %> </a>
           </li>
         <% end %>
       </ul>
