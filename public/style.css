@@ -4519,7 +4519,7 @@ a.notification-close {
 .hover-fx {
 	overflow: hidden;
 	position: relative;
-	background: #000
+	background: white;
 }
 .hover-fx img {
 	float: left;

@@ -15,6 +15,11 @@
 	text-align: center;
 	display: none;
 }
+
+#circle-switcher{
+	top: 340px;
+	position: absolute;
+}
 .co-date {
 	color: #ccc;
 	color: rgba(255, 255, 255, 0.80);
@@ -48,28 +53,28 @@
 	transform: rotate(6deg);
 }
 .co-circle {
-	width: 300px;
-	height: 300px;
+	width: 150px;
+	height: 150px;
 	border-radius: 50%;
 	background-position: center center;
 	background-repeat: no-repeat;
-	margin: 70px auto 0px;
+	margin: 35px auto 0px;
 	position: relative;
 	z-index: 50;
 }
 .co-info-wrap{
 	position: absolute;
-	width: 200px;
-	height: 200px;
+	width: 150px;
+	height: 150px;
 	border-radius: 50%;
-	top: 50px;
-	left: 50px;
+	top: 0px;
+	left: 0px;
 
-	-webkit-perspective: 800px;
-	-moz-perspective: 800px;
-	-o-perspective: 800px;
-	-ms-perspective: 800px;
-	perspective: 800px;
+	-webkit-perspective: 400px;
+	-moz-perspective: 400px;
+	-o-perspective: 400px;
+	-ms-perspective: 400px;
+	perspective: 400px;
 
 	-webkit-transition: all 0.4s ease-in-out;
 	-moz-transition: all 0.4s ease-in-out;
@@ -83,8 +88,8 @@
 }
 .co-info{
 	position: absolute;
-	width: 200px;
-	height: 200px;
+	width: 150px;
+	height: 150px;
 	border-radius: 50%;
 
 	-webkit-transition: all 0.4s ease-in-out;
@@ -131,7 +136,7 @@
 	font-weight: 300;
 	text-shadow: 0 1px 1px rgba(0,0,0,0.3);
 	margin: 0 30px;
-	padding: 15px 0;
+	padding: 10px 0;
 	text-transform: uppercase;
 }
 .co-info-back a:first-child {
@@ -166,7 +171,7 @@
 	z-index: 1;
 }
 .co-title {
-	height: 130px;
+	height: 10px;
 }
 .co-title h3 {
 	font-weight: 900;

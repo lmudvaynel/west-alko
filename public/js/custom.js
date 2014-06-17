@@ -37,11 +37,12 @@ jQuery(document).ready(function($) {
         }
     })();
 
-    //some good news for my grandpa
-    $("#page_container").height($(document).height());
+    //some good news for my grandpa TODO:
+    $("#layout").height($(document).height());
+    cool = " s";
     $(window).resize(function() {
         alert($(document).height() + "x" + $(document).width())
-        $("#page_container").height($(document).height());
+        $("#layout").height($(document).height());
     });
 
 
