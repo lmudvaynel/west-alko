@@ -2,11 +2,29 @@
 <%= render "/refinery/html_tag" %>
   <% site_bar = render('/refinery/site_bar', :head => true) -%>
   <head>
+    <style type="text/css">
+      <% if @page.slug == "home" %>
+        #layout { 
+          background: url(<%= image_path('background.jpg') %>) no-repeat center center; 
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+          overflow:hidden;
+        }
+      <% end %>
+      .head {
+        height: 205px;
+      }
+      #lang_switch{
+        position:absolute;
+        left:95%;
+        top:15px;"
+      }
+    </style>
+
     <%= render "/refinery/head" %>
   </head>
-  
-  
-
   
   <body>
     <div>
