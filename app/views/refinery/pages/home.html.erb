@@ -1,60 +1,6 @@
-    <style type="text/css">
-      #layout { 
-        background: url(<%= image_path('background.jpg') %>) no-repeat center center; 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        overflow:hidden;
-      }
-      body{
-        overflow-y: hidden;
-      }
-      .head {
-        height: 205px;
-      }
-    </style>
-
-<div id="layout" class="full">
-
-<div class="extrabox">
-  <div class="row clearfix">
-    <div class="extra-content">
-      <div class="grid_8">
-        <div id="map1" class="official-map"></div>
-      </div>
-      <div class="grid_4">
-        <h3 class="col-title"> <%= mail_list[:quick] %></h3><span class="liner"></span>
-        <div class="widget-content">
-          <form method="post" id="contactForm-widget" action="<%= "send me funny sory" %>">
-            <div class="clearfix">
-              <div class="grid_6 alpha fll"><input type="text" name="senderName" id="senderName" placeholder="<%= mail_list[:name] %> *" class="requiredField" /></div>
-              <div class="grid_6 omega flr"><input type="text" name="senderEmail" id="senderEmail" placeholder="<%= mail_list[:email] %> *" class="requiredField email" /></div>
-            </div>
-            <div><textarea name="message" id="message" placeholder="<%= mail_list[:message] %> *" class="requiredField" rows="6"></textarea></div>
-            <input type="submit" id="sendMessage" name="sendMessage" value="<%= mail_list[:send] %>" />
-            <span>  </span>
-          </form><!-- end form -->
-        </div><!-- widget content -->
-      </div><!-- grid 4 -->
-    </div><!-- extra content -->
-
-    <div class="arrow-down"><i class="icon-angle-down"></i></div><!-- arrow down -->
-  </div><!-- end row -->
-</div>  <!-- end extrabox -->
-
-<div class="head">
-    <div class="row">
-      <div id="lang_switch" style="position:absolute;
-      left:95%;top:15px;"><%= link_for_lang %> </div>
-      <div class="logo" id="logo">
-      </div><!-- end logo -->
-
-    </div><!-- row -->
-</div><!-- head -->
 
 
-<div class="headdown my_sticky">        
+<div id="my_main" class="headdown my_sticky">        
     <div class="row clearfix">
       <nav>
         <ul class="sf-menu">

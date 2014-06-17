@@ -4,13 +4,8 @@
   <head>
     <%= render "/refinery/head" %>
   </head>
-  
-  
-
-  
-  <body>
+  <body >
     <div>
-      <% if not  @page.slug == 'home' %>
         <div id="layout" class="full">
           <div id="page_container">
             <header id="header" class="header_v4">
@@ -23,9 +18,7 @@
         </div>
       </div>
       <div id="toTop"><i class="icon-angle-up"></i></div><!-- Back to top -->
-    <% else %>
-      <%= yield %>
-    <% end %>
+
     <%= render "/refinery/javascripts" %>
     <script type="text/javascript" src="/js/jquery.min.js"></script>
     <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>

@@ -39,9 +39,8 @@ jQuery(document).ready(function($) {
 
     //some good news for my grandpa TODO:
     $("#layout").height($(document).height());
-    cool = " s";
     $(window).resize(function() {
-        alert($(document).height() + "x" + $(document).width())
+        console.log($(document).height() + "x" + $(document).width());
         $("#layout").height($(document).height());
     });
 
@@ -222,7 +221,7 @@ jQuery(document).ready(function($) {
             });
             jQuery('.arrow-down i').removeClass('icon-angle-down').addClass('icon-angle-up');
             jQuery('.page-content, .sliderr, .headdown, .head, .breadcrumb, footer').animate({
-                'opacity': 0.5
+                'opacity': 1
             }, {
                 duration: '2000',
                 easing: 'easeInOutExpo'
