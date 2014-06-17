@@ -4,21 +4,28 @@
   <head>
     <%= render "/refinery/head" %>
   </head>
-  <body id="<%= canonical_id @page %>">
-    <div id="frame_">
-      <div id="layout" class="full">
-        <div id="page_container">
-          <header id="header" class="header_v4">
-            <%= render "/refinery/header" -%>
-          </header>
-          <section id="page">
-            <%= yield %>
-          </section>
+  
+  
+  
+  
+  <body onload="f();">
+    <div>
+      <% if not  @page.slug == 'home' %>
+        <div id="layout" class="full">
+          <div id="page_container">
+            <header id="header" class="header_v4">
+              <%= render "/refinery/header" -%>
+            </header>
+            <section id="page">
+              <%= yield %>
+            </section>
+          </div>
         </div>
       </div>
-    </div>
-    
-    <div id="toTop"><i class="icon-angle-up"></i></div><!-- Back to top -->
+      <div id="toTop"><i class="icon-angle-up"></i></div><!-- Back to top -->
+    <% else %>
+      <%= yield %>
+    <% end %>
     <%= render "/refinery/javascripts" %>
     <script type="text/javascript" src="/js/jquery.min.js"></script>
     <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>

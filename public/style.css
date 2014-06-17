@@ -294,12 +294,12 @@ footer {
 .full {
 	width: 100%;
 	margin: 0 auto;
-	background: #fff;
+	background-color:transparent;
 }
 .left-sidebar .posts {
 	float: right
 }
-
+/*
 body[class^="frame_"] .full, 
 body[class^="frame_"] .boxed, 
 body[class^="frame_"] .boxed-margin {
@@ -317,7 +317,7 @@ body[class^="frame_"] div.frame_7 { background: url(images/frames/7.png) repeat-
 body[class^="frame_"] div.frame_8 { background: url(images/frames/8.png) repeat-y center top }
 body[class^="frame_"] div.frame_9 { background: url(images/frames/9.png) repeat-y center top }
 body[class^="frame_"] div.frame_10 { background: url(images/frames/10.png) repeat-y center top }
-
+*/
 #LandingPage[class^="frame_"] .full #header, 
 #LandingPage[class^="frame_"] .boxed #header, 
 #LandingPage[class^="frame_"] .boxed-margin #header {
@@ -714,9 +714,7 @@ body[class^="frame_"] div.frame_10 { background: url(images/frames/10.png) repea
 
 .head {
 	position: relative;
-	background: #fff url(images/head.png) repeat-x top center;
-	border-top: 5px solid #191919;
-	height: 165px;
+	border-top: 10px solid #191919;
 }
 .headBG {
 	width: 100%;
@@ -4422,7 +4420,7 @@ a.notification-close {
 	display: block;
 	color: #BFBFBF;
 	background: #fff;
-	height: 60px;
+	height: 100px;
 }
 .detailes h5 {
 	margin: 0 0 2px 0;

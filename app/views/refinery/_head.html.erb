@@ -13,7 +13,6 @@
     <link rel="stylesheet" type="text/css" href="/styles/responsive.css" media="screen" />
     <link href='http://fonts.googleapis.com/css?family=Marcellus' rel='stylesheet' type='text/css'>
     <style>
-      #footer {background: url(/images/backgrounds/8.jpg) repeat}
     </style><!-- Custom Styles -->
 
   <!-- Circular -->
@@ -40,7 +39,6 @@
 <%= csrf_meta_tags if Refinery::Core.authenticity_token_on_frontend -%>
 <%= yield :meta %>
 
-<%= stylesheet_link_tag "application" %>
 <%= yield :stylesheets %>
 
 
