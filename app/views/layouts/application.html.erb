@@ -3,17 +3,7 @@
   <% site_bar = render('/refinery/site_bar', :head => true) -%>
   <head>
     <style type="text/css">
-      <% if @page.slug == "home" %>
-        #layout { 
-          background: url(<%= image_path('background.jpg') %>) no-repeat center center; 
-          -webkit-background-size: cover;
-          -moz-background-size: cover;
-          -o-background-size: cover;
-          background-size: cover;
-          overflow:hidden;
-        }
-      <% end %>
-      .head {
+      /*.head {
         height: 205px;
       }
       #lang_switch{
@@ -21,6 +11,26 @@
         left:95%;
         top:15px;"
       }
+      #layout { 
+        background: url(<%= image_path('background2.jpg') %>) no-repeat center top; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+      #logo{
+        position: relative;
+        left: 35%;
+        top:6px;
+      }
+      #layout_header { 
+        background: url(<%= image_path('header.jpg') %>) no-repeat center top; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: 100% 100%;
+        
+      }*/
     </style>
 
     <%= render "/refinery/head" %>
@@ -29,13 +39,15 @@
   <body>
     <div>
       <% if not  @page.slug == 'home' %>
-        <div id="layout" class="full">
+        <div class="full">
           <div id="page_container">
             <header id="header" class="header_v4">
               <%= render "/refinery/header" -%>
             </header>
             <section id="page">
-              <%= yield %>
+              <div id="layout">
+                <%= yield %>
+              </div>
             </section>
           </div>
         </div>

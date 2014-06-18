@@ -39,9 +39,7 @@ jQuery(document).ready(function($) {
 
     //some good news for my grandpa TODO:
     $("#layout").height($(document).height());
-    cool = " s";
     $(window).resize(function() {
-        alert($(document).height() + "x" + $(document).width())
         $("#layout").height($(document).height());
     });
 

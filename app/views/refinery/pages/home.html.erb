@@ -1,6 +1,27 @@
-    
-<div id="layout" class="full">
+<style type="text/css">
+    #layout { 
+      background: url(<%= image_path('background2.jpg') %>) no-repeat center top; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    #logo{
+      position: relative;
+      left: 35%;
+      top:6px;
+    }
+    #layout_header { 
+      background: url(<%= image_path('header.jpg') %>) no-repeat center top; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: 100% 100%;
+      
+    }
+</style>
 
+<div id="layout_header">
 <div class="extrabox">
   <div class="row clearfix">
     <div class="extra-content">
@@ -31,12 +52,14 @@
     <div class="row">
       <div id="lang_switch"><%= link_for_lang %> </div>
       <div class="logo" id="logo">
+        <img src="<%= image_path('logo-w-a.png')%>"
       </div><!-- end logo -->
 
     </div><!-- row -->
 </div><!-- head -->
+</div>
 
-
+<div id="layout">
 <div class="headdown my_sticky">        
     <div class="row clearfix">
       <nav>
@@ -109,5 +132,4 @@
     </nav>
   </ul>
 </div>
-
 </div>
