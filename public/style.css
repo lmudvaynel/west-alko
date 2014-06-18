@@ -1060,7 +1060,7 @@ li li a .sf-sub-indicator {  border-bottom: 0 !important }
 /*	Page Content
 ----------------------------------------------------------------------*/
 .page-content {
-	margin: 70px 0;
+	margin: 0px 0;
 }
 .grey-line {
 	width: 100%;
@@ -4421,7 +4421,7 @@ a.notification-close {
 	display: block;
 	color: #BFBFBF;
 	background: #fff;
-	height: 45px;
+	height: 35px;
 }
 .detailes h5 {
 	margin: 0 0 2px 0;
@@ -7317,7 +7317,7 @@ input[disabled], select[disabled], textarea[disabled], input[readonly], select[r
 .mb { margin-bottom: 20px !important }
 .mbt { margin-bottom: 30px !important }
 .mbf { margin-bottom: 40px !important }
-.mbs { margin-bottom: 70px !important  }
+.mbs { margin-bottom: 0px !important  }
 
 .pt { padding-top: 120px }
 
