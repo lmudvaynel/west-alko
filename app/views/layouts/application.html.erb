@@ -2,60 +2,24 @@
 <%= render "/refinery/html_tag" %>
   <% site_bar = render('/refinery/site_bar', :head => true) -%>
   <head>
-    <style type="text/css">
-      /*.head {
-        height: 205px;
-      }
-      #lang_switch{
-        position:absolute;
-        left:95%;
-        top:15px;"
-      }
-      #layout { 
-        background: url(<%= image_path('background2.jpg') %>) no-repeat center top; 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-      }
-      #logo{
-        position: relative;
-        left: 35%;
-        top:6px;
-      }
-      #layout_header { 
-        background: url(<%= image_path('header.jpg') %>) no-repeat center top; 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: 100% 100%;
-        
-      }*/
-    </style>
-
     <%= render "/refinery/head" %>
   </head>
   
   <body>
-    <div>
-      <% if not  @page.slug == 'home' %>
-        <div class="full">
-          <div id="page_container">
-            <header id="header" class="header_v4">
-              <%= render "/refinery/header" -%>
-            </header>
-            <section id="page">
-              <div id="layout">
-                <%= yield %>
-              </div>
-            </section>
+    <div class="full">
+      <div id="page_container">
+        <header id="header" class="header_v4">
+          <div id="layout_header">
+            <%= render "/refinery/header" -%>
           </div>
-        </div>
+        </header>
+        <section id="page">
+          <div id="layout_bottom">
+            <%= yield %>
+          </div>
+        </section>
       </div>
-      <div id="toTop"><i class="icon-angle-up"></i></div><!-- Back to top -->
-    <% else %>
-      <%= yield %>
-    <% end %>
+    </div>
     <%= render "/refinery/javascripts" %>
     <script type="text/javascript" src="/js/jquery.min.js"></script>
     <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>

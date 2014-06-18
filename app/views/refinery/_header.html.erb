@@ -1,5 +1,35 @@
+<style type="text/css">
+  .head {
+    height: 205px;
+  }
+  #lang_switch{
+    position:absolute;
+    left:95%;
+    top:15px;"
+  }
+  
+  #layout_bottom { 
+    background: url(<%= image_path('background2.jpg') %>) no-repeat center top; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  #logo{
+    position: relative;
+    left: 35%;
+    top:6px;
+  }
+  #layout_header { 
+    background: url(<%= image_path('header.jpg') %>) no-repeat center top; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: 100% 100%;
+    
+  }
+</style>
 
-<div id="layout_header">
 <div class="extrabox">
   <div class="row clearfix">
     <div class="extra-content">
@@ -30,6 +60,7 @@
     <div class="row">
       <div id="lang_switch"><%= link_for_lang %> </div>
       <div class="logo" id="logo">
+        <img src="<%= image_path('background2.jpg') %>">
       </div><!-- end logo -->
 
     </div><!-- row -->
@@ -70,5 +101,4 @@
         </ul><!-- end menu -->
       </nav><!-- end nav -->
     </div><!-- row -->
-</div>
 </div>

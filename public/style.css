@@ -355,7 +355,6 @@ body[class^="frame_"] div.frame_10 { background: url(images/frames/10.png) repea
 }
 .clearfix {
 	zoom: 1;
-	left: 400px;
 }
 
 /*	Header
