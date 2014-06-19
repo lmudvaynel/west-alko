@@ -1,9 +1,9 @@
 development:
   adapter: mysql2
   encoding: utf8
-  database: westalko_dev
-  username: root
-  password: ''
+  database: westalko
+  username: artjom
+  password: 'dilainik'
 
 test:
   adapter: mysql2
