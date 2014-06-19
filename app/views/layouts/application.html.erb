@@ -6,16 +6,12 @@
   </head>
   
   <body>
-    <div class="full">
+    <div id="layout" class="full">
       <div id="page_container">
         <header id="header" class="header_v4">
-          <div id="layout_header">
-            <%= render "/refinery/header" -%>
-          </div>
+          <%= render "/refinery/header" -%>
         </header>
-        <div id="layout_bottom">
           <%= yield %>
-        </div>
       </div>
     </div>
     <%= render "/refinery/javascripts" %>

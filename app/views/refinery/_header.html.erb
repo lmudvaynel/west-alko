@@ -7,34 +7,35 @@
     left:95%;
     top:15px;"
   }
-  
-  #layout_bottom { 
-    background: url(<%= image_path('background2.jpg') %>) no-repeat center top; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-  .page { 
-    background: url(<%= image_path('background2.jpg') %>) no-repeat center top; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
   #logo{
-    position: relative;
-    left: 230px;
-    top: 36px;
+    position: absolute;
+    left: 400px;
+    width: 400px;
+    top: 40px;
   }
-  #layout_header { 
+  #header { 
     background: url(<%= image_path('header.jpg') %>) no-repeat center top; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: 100% 100%;
-    
   }
+
+  <% if @page.slug == "home" %>
+    #layout{ 
+      background: url(<%= image_path('background2.jpg') %>) no-repeat center top; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      
+    }
+  <% else %>
+    .breadcrumb-place{
+      background: #0b0b0b url(<%= image_path('header_under.jpg') %>) no-repeat top center;
+    }
+  <% end %>
+
 </style>
 
 <div class="extrabox">
@@ -67,9 +68,10 @@
     <div class="row">
       <div id="lang_switch"><%= link_for_lang %> </div>
       <div class="logo" id="logo">
-        <img src="<%= image_path('logo-w-a.png') %>">
+        <a href="/">
+          <img src="<%= image_path('logo-w-a.png') %>">
+        </a>
       </div><!-- end logo -->
-
     </div><!-- row -->
 </div><!-- head -->
 
