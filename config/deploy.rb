@@ -10,7 +10,7 @@ require 'capistrano/ext/multistage'
 set :application, "WA" #write app name there
 
 set :scm, :git
-set :repository,  "git@github.com:derevjaginti/west-alko.git" #place your repo there
+set :repository,  "git@github.com:lmudvaynel/west-alko.git" #place your repo there
 
 set :deploy_via, :remote_cache
 
