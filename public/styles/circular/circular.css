@@ -64,11 +64,11 @@
 }
 .co-info-wrap{
 	position: absolute;
-	width: 300px;
-	height: 300px;
+	width: 150px;
+	height: 150px;
 	border-radius: 50%;
-	top: 0px;
-	left: 0px;
+	top: 75px;
+	left: 75px;
 
 	-webkit-perspective: 400px;
 	-moz-perspective: 400px;
@@ -88,8 +88,8 @@
 }
 .co-info{
 	position: absolute;
-	width: 300px;
-	height: 300px;
+	width: 150px;
+	height: 150px;
 	border-radius: 50%;
 
 	-webkit-transition: all 0.4s ease-in-out;
@@ -140,7 +140,7 @@
 	text-transform: uppercase;
 }
 .co-info-back a:first-child {
-	margin-top: 108px;
+	margin-top: 37px;
 	border-bottom: 1px solid rgba(0,0,0,0.2);
 	box-shadow: 0 1px 0 rgba(255,255,255,0.3);
 }

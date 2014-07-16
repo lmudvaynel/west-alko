@@ -7314,7 +7314,7 @@ input[disabled], select[disabled], textarea[disabled], input[readonly], select[r
 .mtf { margin-top: 40px !important }
 .mts { margin-top: 70px !important }
 
-.mb { margin-bottom: 20px !important }
+.mb { margin-bottom: 20px !important; margin-top: 20px}
 .mbt { margin-bottom: 30px !important }
 .mbf { margin-bottom: 40px !important }
 .mbs { margin-bottom: 0px !important  }
