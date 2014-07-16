@@ -1112,6 +1112,10 @@ li li a .sf-sub-indicator {  border-bottom: 0 !important }
 .breadcrumb-place {
 	height: 110px;
 	background: #0b0b0b url(images/breadcrumb.jpg) no-repeat top center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: 100% 100%;
 }
 .page-title {
 	float: left;
