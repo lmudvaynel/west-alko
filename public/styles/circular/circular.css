@@ -169,6 +169,7 @@
 	margin: -6px auto 20px auto;
 	position: relative;
 	z-index: 1;
+	background-size: 40%
 }
 .co-title {
 	height: 10px;
