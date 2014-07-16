@@ -48,17 +48,17 @@ module ApplicationHelper
 
   def url_for_product(product)
     if product == nil
-      get_products.url.to_s
+      get_products.slug
     else 
-      get_products.url.to_s + "/" + product.id.to_s
+      get_products.slug + "/" + product.id.to_s
     end
   end
 
   def url_for_type(way, value,value2=nil)
     if !value2 
-      get_products.url.to_s + "?" + way + "=" + value 
+      get_products.slug + "?" + way + "=" + value 
     else
-      get_products.url.to_s + "?" + way + "=" + value + "&make=" + value2
+      get_products.slug + "?" + way + "=" + value + "&make=" + value2
     end
   end
 

@@ -9,7 +9,6 @@
   }
   #logo{
     position: absolute;
-    left: 400px;
     width: 400px;
     top: 40px;
   }
@@ -65,13 +64,13 @@
 </div>  <!-- end extrabox -->
 
 <div class="head">
-    <div class="row">
-      <div id="lang_switch"><%= link_for_lang %> </div>
-      <div class="logo" id="logo">
+    <div class="logo" id="logo">
         <a href="/">
           <img src="<%= image_path('logo-w-a.png') %>">
         </a>
       </div><!-- end logo -->
+    <div class="row">
+      <div id="lang_switch"><%= link_for_lang %> </div>
     </div><!-- row -->
 </div><!-- head -->
 
