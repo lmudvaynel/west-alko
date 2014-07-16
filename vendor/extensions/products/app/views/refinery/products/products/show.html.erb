@@ -12,9 +12,17 @@
 
 
       <div class="project-links">
-        <a href="<%= url_for_product(@product.prev) %>"><i class="icon-angle-left mi"></i><%= navigation_list[:prev_product] %></a>
-        <a href="<%= url_for_product(nil) %>"> <i class="icon-th toptip" title="<%= navigation_list[:all_product] %>"></i> </a>
-        <a href="<%= url_for_product(@product.next) %>"><%= navigation_list[:next_product] %><i class="icon-angle-right mii"></i></a>
+        <%= link_to refinery.products_product_path(@product.prev) do %>
+          <i class="icon-angle-left mi"></i>
+          <%=navigation_list[:prev_product] %>
+        <% end %>
+        <%= link_to refinery.products_products_path do %>
+          <i class="icon-th toptip" title="<%= navigation_list[:all_product] %>"></i>
+        <% end %>
+        <%= link_to refinery.products_product_path(@product.next) do %>
+          <%=navigation_list[:next_product] %>
+          <i class="icon-angle-right mi"></i>
+        <% end %>
       </div><!-- links -->
     </div><!-- first row -->
 
