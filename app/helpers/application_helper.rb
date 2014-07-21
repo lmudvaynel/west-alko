@@ -9,8 +9,8 @@ module ApplicationHelper
   end
 
   def alco_type_list
-    @types_en = {all: 'All', wine: 'Wine', vodka: 'Vodka', whiskey: 'Whiskey'} 
-    @types_ru = {all: 'Все', wine: 'Вино', vodka: 'Водка', whiskey: 'Виски'}
+    @types_en = {all: 'All', wine: 'Wine', vodka: 'Vodka', whiskey: 'Whiskey', abc: "абц"} 
+    @types_ru = {all: 'Все', wine: 'Вино', vodka: 'Водка', whiskey: 'Виски', abc: 'abc'}
     I18n.locale == :en ? @types_en : @types_ru
   end
 

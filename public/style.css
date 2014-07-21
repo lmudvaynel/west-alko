@@ -248,7 +248,9 @@ footer {
 }
 
 .grid_10 {
-	width:81.333%;
+	width:100%;
+	display: block;
+	text-align: center;
 }
 
 .grid_11 {
@@ -4294,7 +4296,8 @@ a.notification-close {
 /*	Portfolio
 ----------------------------------------------------------------------*/
 .portfolio {
-	width: 100% !important;
+	display: inline-block;
+	width: 82%;
 }
 .portfolio-carousel, .client-carousel, .magazine-carousel {
 	width: 100% !important;
@@ -4363,6 +4366,7 @@ a.notification-close {
 	margin: 0 7px 20px;
 	overflow: hidden;
 	position: relative;
+	width: 47%;
 }
 .anyClass li:hover, .portfolio li:hover {
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -4575,7 +4579,7 @@ a.notification-close {
 }
 .hover-fx span {
 	font-size: 16px;
-	padding: 10px 0 0 12px;
+	padding: 11px 0 0 2px;
 	display: block;
 }
 .anyClass li:hover .fRight, .portfolio li:hover .fRight { bottom: 37.8%; left: 43%; }
