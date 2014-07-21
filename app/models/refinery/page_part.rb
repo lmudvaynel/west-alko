@@ -1,3 +1,4 @@
+# encoding: utf-8
 module Refinery
   class PagePart < Refinery::Core::BaseModel
 

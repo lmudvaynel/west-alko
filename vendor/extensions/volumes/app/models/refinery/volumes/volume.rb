@@ -1,3 +1,4 @@
+# encoding: utf-8
 module Refinery
   module Volumes
     class Volume < Refinery::Core::BaseModel

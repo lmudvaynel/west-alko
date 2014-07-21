@@ -1,3 +1,4 @@
+# encoding: utf-8
 module Refinery
   module Factories
     class Factory < Refinery::Core::BaseModel
