@@ -6,18 +6,20 @@ module Refinery
       before_filter :find_page
 
       def index
+        @page = Page.find_by_slug("factories")
         # you can use meta fields from your model instead (e.g. browser_title)
-        # by swapping @page for @factory in the line below:
+        # by swapping @page for @product in the line below:
         present(@page)
       end
 
       def show
         @factory = Factory.find(params[:id])
-
+        @page = Page.find_by_slug("factories")
         # you can use meta fields from your model instead (e.g. browser_title)
-        # by swapping @page for @factory in the line below:
+        # by swapping @page for @product in the line below:
         present(@page)
       end
+
 
     protected
 
