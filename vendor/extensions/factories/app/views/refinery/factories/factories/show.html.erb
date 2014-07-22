@@ -11,7 +11,7 @@
               <% Refinery::FactoryPhotos::FactoryPhoto.where("factory_id = ?", params[:id]).each do |obj| %>
               <li class="grid_3">
                 <div class="hover-fx">
-                  <a href="<%= obj.image.url %>" rel="prettyPhoto[pp_gal_0]"><img src="<%= obj.image.url %>"></a>
+                  <a href="<%= obj.image.url %>" rel="prettyPhoto[pp_gal_0]"><img src="<%= obj.image.thumbnail("191x127").url %>"></a>
                 </div>
               </li>
               <% end %>
