@@ -83,4 +83,8 @@ module ApplicationHelper
   def get_factories
     Refinery::Page.find('factories') 
   end
+
+  def factory_link(factory)
+    factory.id==1 ? url_for_factory(factory) : 'http://itar.su/factories/1'
+  end
 end
