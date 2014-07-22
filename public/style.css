@@ -263,6 +263,20 @@ footer {
 	content: "";
 	clear: both;
 }
+
+.line2 {display: block;height: 140px; width: 100%; overflow: hidden; margin: auto;}
+.image {clear: both; position: relative;}
+.image ul li {
+	overflow: hidden;
+display: inline-block;
+padding: 5px 9px;
+width: 191px;
+height: 127px;}
+.button-right {cursor: pointer;height: 127px;width: 34px;right: 0px;margin-top: -135px;position: absolute;}
+.button-left {cursor: pointer;overflow: hidden;width: 34px;float: left;margin-top: 5px;position: absolute;height: 132px;z-index: 2000;}
+.button-left span {;background: url(assets/arrow-left.png); width: 34px; height: 127px; display: block;background-repeat: no-repeat;background-size: 100% 100%;}
+.button-right span {background: url(assets/arrow-right.png); width: 34px; height: 127px; display: block;background-repeat: no-repeat;background-size: 100% 100%;}
+
 .grid_full {
 	width:100%;
 }

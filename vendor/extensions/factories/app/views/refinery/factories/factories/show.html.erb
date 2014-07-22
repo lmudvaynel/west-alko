@@ -2,17 +2,25 @@
     
       <div class="row clearfix mbs">
       	<h4> <%= @factory.name %> </h4>
-        <div class="grid_12">
-              <ul class="portfolio clearfix">
-                <% Refinery::FactoryPhotos::FactoryPhoto.where("factory_id = ?", params[:id]).each do |obj| %>
-                <li class="grid_3">
-                  <div class="hover-fx">
-                    <a href="<%= obj.image.url %>" data-gal="lightbox"><img src="<%= obj.image.url %>"></a>
-                  </div>
-                </li>
-                <% end %>
-              </ul>
+        <div class="button-left" onclick="left_click(0)">
+          <span></span>
+        </div>
+        <div class="line2">
+          <div class="image">
+            <ul>
+              <% Refinery::FactoryPhotos::FactoryPhoto.where("factory_id = ?", params[:id]).each do |obj| %>
+              <li>
+                <div class="hover-fx">
+                  <a href="<%= obj.image.url %>" data-gal="lightbox"><img src="<%= obj.image.url %>"></a>
+                </div>
+              </li>
+              <% end %>
+            </ul>
+          </div>
         </div><!-- grid 12 -->
+        <div class="button-right" onclick="right_click(0)">
+          <span></span>
+        </div>
         <%=raw @factory.description %>
       </div><!-- row -->
     </div><!-- end page content -->
