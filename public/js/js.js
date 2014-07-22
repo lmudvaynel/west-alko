@@ -16,6 +16,8 @@ $(document).ready(function (){
   countWidth=(Math.floor(1060/212));
   ceilCount[0]=Math.ceil($('.image').find('ul li').length/countWidth);
   floorCount[0]=Math.floor($('.image').find('ul li').length/countWidth);
+  
+  $('.image').find("a[rel^='prettyPhoto']").prettyPhoto({theme: 'facebook', /* light_rounded / dark_rounded / light_square / dark_square / facebook */slideshow:5000, autoplay_slideshow:true});
 })
 function left_click (index) {
   counter[index]==undefined ? counter[index]=0 : counter[index]
