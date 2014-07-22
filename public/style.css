@@ -232,7 +232,7 @@ footer {
 }
 
 .grid_6 {
-	width:48.0%;
+	width:47.0%;
 }
 
 .grid_7 {
@@ -4366,7 +4366,6 @@ a.notification-close {
 	margin: 0 7px 20px;
 	overflow: hidden;
 	position: relative;
-	width: 47%;
 }
 .anyClass li:hover, .portfolio li:hover {
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);

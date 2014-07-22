@@ -98,11 +98,13 @@
               </ul> 
             <% elsif page.slug == "factories" or page.slug == "заводы" %>
               <ul>
-              <% Refinery::Factories::Factory.all.each do |factory| %>
                 <li>
-                  <%= link_to factory.name, url_for_factory(factory) %>
+                  <% @factory=Refinery::Factories::Factory.find(1) %>
+                  <%= link_to @factory.name, url_for_factory(@factory) %>
                 </li>
-              <% end %>
+                <li>
+                  <%= link_to factory_list[:itar], "http://itar.su/factories/1" %>
+                </li>
               </ul>
             <% end %>
             </li>

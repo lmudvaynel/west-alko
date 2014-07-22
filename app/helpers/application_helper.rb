@@ -8,9 +8,15 @@ module ApplicationHelper
     I18n.locale == :en ? @types_en : @types_ru
   end
 
+  def factory_list
+    @types_en = {itar: 'Itar', wa: 'West-Alko'} 
+    @types_ru = {itar: 'Итар', wa: 'Вест-Алко'}
+    I18n.locale == :en ? @types_en : @types_ru
+  end
+
   def alco_type_list
-    @types_en = {all: 'All', wine: 'Wine', vodka: 'Vodka', whiskey: 'Whiskey', abc: "абц"} 
-    @types_ru = {all: 'Все', wine: 'Вино', vodka: 'Водка', whiskey: 'Виски', abc: 'abc'}
+    @types_en = {all: 'All', wine: 'Wine', champagne: 'Champagne', cognac: 'Cognac'} 
+    @types_ru = {all: 'Все', wine: 'Вино', champagne: 'Шампанское', cognac: 'Коньяк'}
     I18n.locale == :en ? @types_en : @types_ru
   end
 
