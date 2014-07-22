@@ -25,7 +25,7 @@
   <ul class="portfolio clearfix">
     <% @products.each do |product| %>
       <% volume = Refinery::Volumes::Volume.find(:first, :conditions => ['product_id = ?', product.id]) %>
-      <li class="grid_3" data-type="digital">
+      <li class="grid_3 grid_3_3" data-type="digital">
         <div class="hover-fx">   
           <% if volume != nil and volume.pic != nil %>
             <img src="<%= volume.pic.thumbnail("300x300").url %>" alt="#">
