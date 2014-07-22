@@ -10,9 +10,9 @@
   <div class='field'>
     make 
     <% if @product !=nil %>
-      <%= f.select :make_type, options_for_select([make_type_list[:own],make_type_list[:foreign]],@product.make_type) %>
+      <%= f.select :make_type, options_for_select([[make_type_list[:own],"own"],[make_type_list[:foreign],"foreign"]],@product.make_type) %>
     <% else %>
-      <%= f.select :make_type, options_for_select([make_type_list[:own],make_type_list[:foreign]])%>
+      <%= f.select :make_type, options_for_select([[make_type_list[:own],"own"],[make_type_list[:foreign],"foreign"]])%>
     <% end %>
   </div>
 
@@ -20,9 +20,15 @@
   <div class='field'>
     alco
     <% if @product !=nil %>
-      <%= f.select :alco_type, options_for_select([alco_type_list[:wine],alco_type_list[:cognac],alco_type_list[:champagne]],@product.alco_type) %>
+      <%= f.select :alco_type, 
+      options_for_select([[alco_type_list[:wine],"wine"],
+                          [alco_type_list[:cognac],"cognac"],
+                          [alco_type_list[:champagne],"champagne"]],
+                          @product.alco_type) %>
     <% else %>
-      <%=f.select :alco_type, options_for_select([alco_type_list[:wine],alco_type_list[:cognac],alco_type_list[:champagne]]) %>
+      <%=f.select :alco_type, options_for_select([[alco_type_list[:wine],"wine"],
+                          [alco_type_list[:cognac],"cognac"],
+                          [alco_type_list[:champagne],"champagne"]]) %>
     <% end %>
   </div>
 
