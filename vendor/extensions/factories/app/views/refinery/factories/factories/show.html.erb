@@ -6,10 +6,10 @@
           <span></span>
         </div>
         <div class="line2">
-          <div class="image">
-            <ul>
+          <div class="image grid_12">
+            <ul class="portfolio clearfix">
               <% Refinery::FactoryPhotos::FactoryPhoto.where("factory_id = ?", params[:id]).each do |obj| %>
-              <li>
+              <li class="grid_3">
                 <div class="hover-fx">
                   <a href="<%= obj.image.url %>" data-gal="lightbox"><img src="<%= obj.image.url %>"></a>
                 </div>
