@@ -8,17 +8,29 @@ function resize_logo() {
   left<0 ? left=0 : left
   $('#logo').css('left', left+"px") 
 };
-window.onload=resize_logo();
-$(window).resize(resize_logo);
-$(document).ready(function (){
+function update_size() {
   var imgHeight=$('.image').find('ul li').length*212;
-    $('.image').css('width',imgHeight + 'px')
-  countWidth=(Math.floor(1060/212));
+  $('.image').css('width',imgHeight + 'px');
+  $('.line2').css('width',Math.floor($('.row').width()/212)*212+'px');
+  countWidth=(Math.floor($('.line2').width()/212));
   ceilCount[0]=Math.ceil($('.image').find('ul li').length/countWidth);
   floorCount[0]=Math.floor($('.image').find('ul li').length/countWidth);
-  
+}
+
+$(document).ready(resize_logo());
+$(document).ready(update_size());
+$(document).ready(function (){
   $('.image').find("a[rel^='prettyPhoto']").prettyPhoto({theme: 'facebook', /* light_rounded / dark_rounded / light_square / dark_square / facebook */slideshow:5000, autoplay_slideshow:true});
 })
+
+$(window).resize(update_size);
+$(window).resize(resize_logo);
+$(window).resize(function () {
+  $('.image').stop()
+      .animate({left: 0 + 'px'},1500);
+      counter[0]=0;
+});
+
 function left_click (index) {
   counter[index]==undefined ? counter[index]=0 : counter[index]
   if (counter[index]==0) 
