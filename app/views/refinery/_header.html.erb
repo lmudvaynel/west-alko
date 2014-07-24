@@ -96,7 +96,7 @@
               <ul>  
               <% make_type_list.each do |key,value| %>
                 <li>
-                  <a href="<%= url_for_type("make",key.to_s) %>"> <%= value %> </a>
+                  <%= link_to value, refinery.root_path+url_for_type("make",key.to_s)%>
                 </li>
               <% end %>
               </ul> 
