@@ -86,13 +86,13 @@ jQuery(document).ready(function($) {
             marker: {
                 values: [{
                     address: "Yaltinskaya 128, Kaliningrad Russia",
-                    data: '<img src="/assets/itar.png"><font color="#000">Завод ИТАР: ул.Ялтинская 128</font>'
+                    data: '<img src="/assets/itar_map.png"><font color="#000">Завод ИТАР: ул.Ялтинская 128</font>'
                 }, {
                     address: "Pavlika Morozova 96 Kaliningrad Russia",
-                    data: '<img src="/assets/office.png"><font color="#000">Наш центральный офис: ул. Павлика Морозова 96</font>'
+                    data: '<img src="/assets/office_map.png"><font color="#000">Наш центральный офис: ул. Павлика Морозова 96</font>'
                 }, {
                     address: "Kaliningradskaya 23А Chernyahovsk Kaliningrad Russia",
-                    data: '<img src="/assets/west-alko.png"><font color="#000">Завод Вест-Алко: г.Черняховск, ул. Калининградская 23А</font>'
+                    data: '<img src="/assets/wa_map.png"><font color="#000">Завод Вест-Алко: г.Черняховск, ул. Калининградская 23А</font>'
                 }],
                 options: {
                     draggable: false
