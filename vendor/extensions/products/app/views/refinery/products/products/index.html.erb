@@ -37,8 +37,8 @@
           
         </div>
         <div class="detailes">
-          <h5> <a href="#"><%= product.name %></a> </h5>
-          <a href="#"><%= alco_type_list[:"#{product.alco_type}"] %></a>
+          <h5> <a href="<%= url_for_product(volume.product) %>"><%= product.name %></a> </h5>
+          <a href="<%= url_for_type("alco",product.alco_type.to_s,make) %>"><%= alco_type_list[:"#{product.alco_type}"] %></a>
         </div>
       <div>
       </li>
