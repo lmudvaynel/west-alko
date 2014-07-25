@@ -189,7 +189,6 @@ footer {
 .grid_5,
 .grid_6,
 .grid_7,
-.grid_8,
 .grid_9,
 .grid_10,
 .grid_11,
@@ -245,7 +244,8 @@ footer {
 }
 
 .grid_8 {
-	width:64.667%;
+	width: 79.667%;
+	margin: auto;
 }
 
 .grid_9 {

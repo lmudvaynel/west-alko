@@ -48,20 +48,21 @@
       <div class="grid_8">
         <div id="map1" class="official-map"></div>
       </div>
+      <!--
       <div class="grid_4">
-        <h3 class="col-title"> <%= mail_list[:quick] %></h3><span class="liner"></span>
+        <h3 class="col-title"> <%#= mail_list[:quick] %></h3><span class="liner"></span>
         <div class="widget-content">
-          <form method="post" id="contactForm-widget" action="<%= "send me funny sory" %>">
+          <form method="post" id="contactForm-widget" action="<%#= "send me funny sory" %>">
             <div class="clearfix">
-              <div class="grid_6 alpha fll"><input type="text" name="senderName" id="senderName" placeholder="<%= mail_list[:name] %> *" class="requiredField" /></div>
-              <div class="grid_6 omega flr"><input type="text" name="senderEmail" id="senderEmail" placeholder="<%= mail_list[:email] %> *" class="requiredField email" /></div>
+              <div class="grid_6 alpha fll"><input type="text" name="senderName" id="senderName" placeholder="<#%= mail_list[:name] %> *" class="requiredField" /></div>
+              <div class="grid_6 omega flr"><input type="text" name="senderEmail" id="senderEmail" placeholder="<%#= mail_list[:email] %> *" class="requiredField email" /></div>
             </div>
-            <div><textarea name="message" id="message" placeholder="<%= mail_list[:message] %> *" class="requiredField" rows="6"></textarea></div>
-            <input type="submit" id="sendMessage" name="sendMessage" value="<%= mail_list[:send] %>" />
+            <div><textarea name="message" id="message" placeholder="<#%= mail_list[:message] %> *" class="requiredField" rows="6"></textarea></div>
+            <input type="submit" id="sendMessage" name="sendMessage" value="<%#= mail_list[:send] %>" />
             <span>  </span>
-          </form><!-- end form -->
-        </div><!-- widget content -->
-      </div><!-- grid 4 -->
+          </form>< end form 
+        </div> widget content 
+      </div> grid 4 -->
     </div><!-- extra content -->
 
     <div class="arrow-down"><i class="icon-angle-down"></i></div><!-- arrow down -->
@@ -74,7 +75,7 @@
           <img src="<%= image_path('itar_itar.png') %>" width="55" height="55" >
         </a>
       </div><!-- end logo -->
-    <div class="row">
+    <!--<div class="row">
       <div id="lang_switch"><%= link_for_lang %> </div>
     </div><!-- row -->
 </div><!-- head -->
