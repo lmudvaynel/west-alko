@@ -21,14 +21,10 @@
     alco
     <% if @product !=nil %>
       <%= f.select :alco_type, 
-      options_for_select([[alco_type_list[:wine],"wine"],
-                          [alco_type_list[:cognac],"cognac"],
-                          [alco_type_list[:champagne],"champagne"]],
+      options_for_select([[alco_type_list[:vodka],"vodka"]],
                           @product.alco_type) %>
     <% else %>
-      <%=f.select :alco_type, options_for_select([[alco_type_list[:wine],"wine"],
-                          [alco_type_list[:cognac],"cognac"],
-                          [alco_type_list[:champagne],"champagne"]]) %>
+      <%=f.select :alco_type, options_for_select([[alco_type_list[:vodka],"vodka"]]) %>
     <% end %>
   </div>
 

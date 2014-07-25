@@ -15,8 +15,8 @@ module ApplicationHelper
   end
 
   def alco_type_list
-    @types_en = {all: 'All', wine: 'Wine', champagne: 'Champagne', cognac: 'Cognac'} 
-    @types_ru = {all: 'Все', wine: 'Вино', champagne: 'Шампанское', cognac: 'Коньяк'}
+    @types_en = {all: 'All', vodka: 'Vodka'} 
+    @types_ru = {all: 'Все', vodka: 'Водка'}
     I18n.locale == :en ? @types_en : @types_ru
   end
 
@@ -85,6 +85,6 @@ module ApplicationHelper
   end
 
   def factory_link(factory)
-    factory.id==1 ? url_for_factory(factory) : 'http://itar.su/factories/1'
+    factory.id==1 ? url_for_factory(factory) : 'http://west-alko.com/factories/1'
   end
 end
