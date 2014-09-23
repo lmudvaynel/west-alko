@@ -92,7 +92,11 @@
             <% else %>
               <li>
             <% end %>
-            <%= link_to page.path, refinery.url_for(page.url) %>
+            <% if page.slug == "factories" or page.slug == "заводы" %>
+              <%= link_to Refinery::Factories::Factory.first.name, factory_link(Refinery::Factories::Factory.first) %>
+            <% else %>
+              <%= link_to page.path, refinery.url_for(page.url) %>
+            <% end %>
             <% if page.slug == "products" or page.slug == "продукция"%>
               <ul>  
               <% make_type_list.each do |key,value| %>
@@ -101,14 +105,6 @@
                 </li>
               <% end %>
               </ul> 
-            <% elsif page.slug == "factories" or page.slug == "заводы" %>
-              <ul>
-              <% Refinery::Factories::Factory.all.each do |factory| %>
-                <li>
-                  <%= link_to factory.name, factory_link(factory) %>
-                </li>
-              <% end %>
-              </ul>
             <% end %>
             </li>
           <% end %>
