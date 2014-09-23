@@ -1,0 +1,57 @@
+/* NEW CSS */
+html { height:100%;}
+
+body {  font-family: Arial, Helvetica, sans-serif; background:#497496 }
+td, th {  font-family: Arial, Helvetica, sans-serif;  }
+
+a { font-family:Arial, Helvetica, sans-serif; text-decoration:none; }
+a:hover { font-family: Arial, Helvetica, sans-serif;  text-decoration:none;}
+
+.clear   { clear:both}
+
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+#wrapper { width:100%; height:100%; }
+.wrapper { padding:0 40px; max-width:1600px; margin:auto}
+
+a, img, input, button, textarea, select { outline: none; resize:none }
+strong, b { font-weight:bold; }
+em { font-style:italic}
+
+.fl { float:left}
+.fr { float:right}
+
+a { 
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+.overlay { position:fixed; z-index:10; width:100%; height:100%; left:0; top:0; background:rgba(0,0,0,0.71)}
+
+.birthday-wrapper { background:#000; text-align:center; color:#fff; width:540px; padding:30px; font-size:16px; position:absolute; top:50%; left:50%; margin:-300px 0 0 -300px}
+.birthday-wrapper h3 { font-size:52px; text-transform:uppercase; line-height:1.1; padding:5px 0}
+.birthday-wrapper .warning { }
+
+.birthday-form { padding: 20px 0}
+.birthday-form .field { display:inline-block; margin:0 5px}
+.birthday-form .field input { border:4px solid #fff; height:44px; padding:4px 0; background:#000; margin:0; color:#fff; font-size:24px; width:110px; text-align:center}
+.birthday-form .button { display:inline-block; margin:0 5px}
+.birthday-form .button input { border:4px solid #fff; height:60px; padding:4px; background:#000; margin:0; color:#fff; font-size:24px; width:110px; text-align:center; cursor:pointer}
+
+.checkbox { padding-top:20px; font-size:14px}
+
+
+
+
+
+
