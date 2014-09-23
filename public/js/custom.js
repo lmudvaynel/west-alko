@@ -85,9 +85,6 @@ jQuery(document).ready(function($) {
             },
             marker: {
                 values: [{
-                    address: "Yaltinskaya 128, Kaliningrad Russia",
-                    data: '<img src="/assets/itar_map.png"><font color="#000">Завод ИТАР: ул.Ялтинская 128</font>'
-                }, {
                     address: "Pavlika Morozova 96 Kaliningrad Russia",
                     data: '<img src="/assets/office_map.png"><font color="#000">Наш центральный офис: ул. Павлика Морозова 96</font>'
                 }, {
