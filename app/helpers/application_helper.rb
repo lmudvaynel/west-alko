@@ -85,6 +85,6 @@ module ApplicationHelper
   end
 
   def factory_link(factory)
-    factory.id==1 ? url_for_factory(factory) : 'http://west-alko.com/factories/1'
+    factory.id==1 ? url_for_factory(factory) : 'http://itar.su/factories/1'
   end
 end
