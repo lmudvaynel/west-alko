@@ -14,7 +14,7 @@ set :repository,  "git@github.com:lmudvaynel/west-alko.git" #place your repo the
 
 set :deploy_via, :remote_cache
 
-set :user, "rvm_user"
+set :user, "root"
 set :use_sudo, false
 
 set :rvm_type, :system 
