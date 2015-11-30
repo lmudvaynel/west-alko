@@ -20,7 +20,6 @@
     -o-background-size: cover;
     background-size: 100% 100%;
   }
-
   <% if @page.slug == "home" %>
     #layout{ 
       background: url(<%= image_path('background_home.jpg') %>) no-repeat center top; 
@@ -41,7 +40,6 @@
   <% end %>
 
 </style>
-
 <div class="extrabox">
   <div class="row clearfix">
     <div class="extra-content">
@@ -93,6 +91,13 @@
               <li>
             <% end %>
             <% if page.slug == "factories" or page.slug == "заводы" %>
+              <ul>  
+                <% Refinery::Factories::Factory.all.each do |factory| %>
+                  <li>
+                    <%= link_to factory.name,factory_link(factory)%>
+                  </li>
+                <% end %>
+              </ul> 
               <%= link_to page.path, factory_link(Refinery::Factories::Factory.first) %>
             <% else %>
               <%= link_to page.path, refinery.url_for(page.url) %>
