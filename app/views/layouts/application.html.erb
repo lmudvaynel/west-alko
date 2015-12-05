@@ -4,7 +4,6 @@
   <head>
     <%= render "/refinery/head" %>
   </head>
-  <% session[:west_alko] =nil %>
   <% session[:last_seen] = Time.now %>
   <% if ((session[:remember]!='1') and (session[:last_seen] < 30.minutes.ago)) %>
     <% session[:west_alko]=nil %>
