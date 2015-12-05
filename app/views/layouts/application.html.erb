@@ -4,13 +4,33 @@
   <head>
     <%= render "/refinery/head" %>
   </head>
-  
+  <% session[:west_alko] =nil %>
+  <% session[:last_seen] = Time.now %>
+  <% if ((session[:remember]!='1') and (session[:last_seen] < 30.minutes.ago)) %>
+    <% session[:west_alko]=nil %>
+  <% end %>
   <body>
+    <% if session[:west_alko] == nil %>
+      <% @day=params[:day].to_s  %>
+      <% @year=params[:year].to_s  %>
+      <% @month=params[:month].to_s  %>
+      <% session[:remember]=params[:remember] %>
+      <% begin %>
+        <%if (age_in_completed_years((@day+'/'+@month+'/'+@year).to_date, Date.current()))>17 %>
+          <% session[:west_alko] = '1' %>
+        <% end %>
+        <% rescue Exception => @e %>
+        <% end %>
+    <% end %>
 </div>
+<% if session[:west_alko] == nil %>
+  <%= render template: "age/index" %>
+<% else %>
     <div id="layout" class="full"<%= @page.slug!="home" ? "style=background-color:white;" : "" %>>
       <div id="page_container">
         <header id="header" class="header_v4">
-          <%= render "/refinery/header" -%>
+          
+          <%= render "/refinery/header" %>
         </header>
           <%= yield %>
       </div>
@@ -30,4 +50,5 @@
     <script type="text/javascript" src="/js/custom.js"></script>
     <script type="text/javascript" src="/js/js.js"></script>
   </body>
+  <% end %>
 </html>

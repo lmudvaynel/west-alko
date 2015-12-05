@@ -62,7 +62,6 @@ module Refinery
           end
         end
       end
-
     protected
 
       def after_update_positions

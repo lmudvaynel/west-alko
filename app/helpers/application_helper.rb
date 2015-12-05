@@ -1,7 +1,15 @@
 # encoding: utf-8
 
 module ApplicationHelper
-
+  def age_in_completed_years (bd, d)
+      # Difference in years, less one if you have not had a birthday this year.
+      a = d.year - bd.year
+      a = a - 1 if (
+           bd.month >  d.month or 
+          (bd.month >= d.month and bd.day > d.day)
+      )
+      a
+  end
   def make_type_list
     @types_en = {own: 'Own', foreign: 'Foreign'} 
     @types_ru = {own: 'Собственные марки', foreign: 'Привлеченные марки'}

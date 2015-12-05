@@ -1,7 +1,7 @@
 /* NEW CSS */
 html { height:100%;}
 
-body {  font-family: Arial, Helvetica, sans-serif; background:#497496 }
+body {  font-family: Arial, Helvetica, sans-serif; background:#731D00 none repeat scroll 0% 0%;}
 td, th {  font-family: Arial, Helvetica, sans-serif;  }
 
 a { font-family:Arial, Helvetica, sans-serif; text-decoration:none; }
@@ -41,7 +41,7 @@ a {
 .birthday-wrapper { background:#000; text-align:center; color:#fff; width:540px; padding:30px; font-size:16px; position:absolute; top:50%; left:50%; margin:-300px 0 0 -300px}
 .birthday-wrapper h3 { font-size:52px; text-transform:uppercase; line-height:1.1; padding:5px 0}
 .birthday-wrapper .warning { }
-
+.birthday-wrapper img {margin: auto;}
 .birthday-form { padding: 20px 0}
 .birthday-form .field { display:inline-block; margin:0 5px}
 .birthday-form .field input { border:4px solid #fff; height:44px; padding:4px 0; background:#000; margin:0; color:#fff; font-size:24px; width:110px; text-align:center}
