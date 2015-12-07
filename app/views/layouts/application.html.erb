@@ -17,6 +17,8 @@
       <% begin %>
         <%if (age_in_completed_years((@day+'/'+@month+'/'+@year).to_date, Date.current()))>17 %>
           <% session[:west_alko] = '1' %>
+        <% else %>
+          <% @e='error' %>
         <% end %>
         <% rescue Exception => @e %>
         <% end %>
