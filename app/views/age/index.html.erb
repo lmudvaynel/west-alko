@@ -1,16 +1,22 @@
-<div id="wrapper">
+<div id="wrapper" style='z-index:99999999;' >
   
   <div id="birthday" class="overlay">
     <div class="birthday-wrapper">
+
       <span class="warning">Вам должно быть больше 18 лет, чтобы зайти на этот сайт.</span>
-      <h3>Добро пожаловать</h3>
-      <span class="warning">Пожалуйста, попробуйте ввести дату своего рождения</span>
+      <% if @e %>
+        <h3>Доступ запрещен! </h3>
+      <% else %>
+        <h3>Добро пожаловать</h3>
+      <% end %>
       
+      <p><span class="warning">Пожалуйста, попробуйте ввести дату своего рождения</span></p>
+
       <div class="birthday-form">
-        <%= render 'form' %>
+        <%= render "/age/form" %>
       </div>
       
-      <img src="/images/itar-logo.png" alt="" />
+      <img src="/assets/wa-logo.png" alt="" />
       
       
     </div>
