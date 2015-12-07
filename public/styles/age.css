@@ -4,7 +4,7 @@
     /* NEW CSS */
 html { height:100%;}
 
-body {  font-family: Arial, Helvetica, sans-serif; background:#731D00 none repeat scroll 0% 0%;}
+body {  font-family: Arial, Helvetica, sans-serif; background:#497496 none repeat scroll 0% 0%;}
 .birthday-wrapper img {margin: auto;}
 td, th {  font-family: Arial, Helvetica, sans-serif;  }
 
@@ -42,7 +42,7 @@ a {
 
 .overlay {overflow: auto; position:fixed; z-index:10; width:100%; height:100%; left:0; top:0; background:rgba(0,0,0,0.71)}
 
-.birthday-wrapper { background:#000; text-align:center; color:#fff; width:540px; padding:30px; font-size:16px; position:absolute; top:50%; left:50%; margin:-250px 0 0 -300px}
+.birthday-wrapper { background:#000; text-align:center; color:#fff; width:540px; padding:30px; font-size:16px; position:absolute; top:50%; left:50%; margin:-333px 0 0 -300px}
 .birthday-wrapper h3 { font-size:52px; text-transform:uppercase; line-height:1.1; padding:5px 0}
 .birthday-wrapper .warning { }
 

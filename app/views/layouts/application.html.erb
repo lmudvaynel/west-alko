@@ -4,7 +4,7 @@
   <head>
     <%= render "/refinery/head" %>
   </head>
-   <% session[:last_seen] = Time.now %>
+  <% session[:last_seen] = Time.now %>
   <% if ((session[:remember]!='1') and (session[:last_seen] < 30.minutes.ago)) %>
     <% session[:west_alko]=nil %>
   <% end %>
@@ -23,12 +23,15 @@
         <% rescue Exception => @e %>
         <% end %>
     <% end %>
-  <body>
 </div>
+<% if session[:west_alko] == nil %>
+  <%= render template: "age/index" %>
+<% else %>
     <div id="layout" class="full"<%= @page.slug!="home" ? "style=background-color:white;" : "" %>>
       <div id="page_container">
         <header id="header" class="header_v4">
-          <%= render "/refinery/header" -%>
+          
+          <%= render "/refinery/header" %>
         </header>
           <%= yield %>
       </div>
@@ -48,4 +51,5 @@
     <script type="text/javascript" src="/js/custom.js"></script>
     <script type="text/javascript" src="/js/js.js"></script>
   </body>
+  <% end %>
 </html>
