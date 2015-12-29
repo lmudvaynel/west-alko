@@ -4,7 +4,7 @@
     /* NEW CSS */
 html { height:100%;}
 
-body {  font-family: Arial, Helvetica, sans-serif; background:#497496 none repeat scroll 0% 0%;}
+body {  font-family: Arial, Helvetica, sans-serif;}
 .birthday-wrapper img {margin: auto;}
 td, th {  font-family: Arial, Helvetica, sans-serif;  }
 
@@ -22,7 +22,11 @@ a:hover { font-family: Arial, Helvetica, sans-serif;  text-decoration:none;}
     visibility: hidden;
 }
 
-#wrapper { width:100%; height:100%; }
+#wrapper {width: 100%;
+height: 100%;
+background: green;
+background: #497496 none repeat scroll 0% 0%;
+position: absolute;}
 .wrapper { padding:0 40px; max-width:1600px; margin:auto}
 
 a, img, input, button, textarea, select { outline: none; resize:none }
