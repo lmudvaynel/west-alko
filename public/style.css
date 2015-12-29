@@ -1030,6 +1030,14 @@ li li a .sf-sub-indicator {  border-bottom: 0 !important }
 	border-bottom: 6px solid #fff;
 	left: 42%;
 }
+#header {
+	background: url(images/header.jpg) no-repeat center top; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: 100% 100%;
+}
+
 
 #header .search {
 	float: right;
