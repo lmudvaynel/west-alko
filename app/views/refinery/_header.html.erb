@@ -11,7 +11,7 @@
     left: 400px;
     width: 311px;
     margin-top: 45px;
-}
+  }
   }
   #header { 
     background: url(<%= image_path('header.jpg') %>) no-repeat center top; 
@@ -91,6 +91,7 @@
               <li>
             <% end %>
             <% if page.slug == "factories" or page.slug == "заводы" %>
+          <!--
               <ul>  
                 <% Refinery::Factories::Factory.all.each do |factory| %>
                   <li>
@@ -98,6 +99,7 @@
                   </li>
                 <% end %>
               </ul> 
+            -->
               <%= link_to page.path, factory_link(Refinery::Factories::Factory.first) %>
             <% else %>
               <%= link_to page.path, refinery.url_for(page.url) %>
